@@ -6,15 +6,15 @@
         /* Add CSS styles for form layout */
         body {
             font-family: Arial, sans-serif;
-            background-color: #1f1b1b;
+            background-color: #fdfbfb;
         }
 
         .container {
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #eedddd;
-            box-shadow: 0 0 10px rgba(150, 142, 142, 0.1);
+            background-color: #c4c1c1;
+            box-shadow: 0 0 10px rgba(219, 219, 219, 0.1);
             border-radius: 5px;
         }
 
@@ -23,9 +23,7 @@
             margin-bottom: 30px;
         }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+        
 
         label {
             display: block;
@@ -35,20 +33,18 @@
 
         input[type="text"],
         input[type="email"],
-        textarea {
+        textarea,select {
             width: 90%;
-            padding: 10px;
+            padding: 12px 20px;
             border: 1px solid #ccc;
-            border-radius: 3px;
+            display: inline-block;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+            
         }
 
-        select {
-            width: 90%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-
+       
         .checkbox-group {
             margin-top: 5px;
         }
@@ -56,19 +52,31 @@
         .checkbox-group label {
             display: block;
         }
-
-        button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
+       
+        input[type=Submit] {
+            width: 30%;
+            background-color: #c2ecc2;
+            color: rgb(5, 1, 1);
+            padding: 14px 20px;
+            margin: 8px 0;
             border: none;
+            border-radius: 4px;
             cursor: pointer;
-            border-radius: 3px;
-        }
+          }
+          input[type=submit]:hover {
+            background-color: #45a049;
+          }
+          input[type=button] {
+            width: 30%;
+            background-color: #daddda;
+            color: rgb(14, 12, 12);
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
 
-        .cancel-button {
-            background-color: #ccc;
-        }
     </style>
 </head>
 <body>
@@ -136,8 +144,8 @@
                 
             </div>
             
-            <div><input type="button"name="button"onclick="alert('Registrations !')" value="Submit">
-                <input type="button" name="cancel-button" value="Canceled">
+            <div><input type="Submit"name="button"  onclick="alert('Register !')"value="Submit">
+                <input type="button" name="cancel" onclick="alert('Cancel !')" value="Cancel">
              </div>
         </body>
 </html>
