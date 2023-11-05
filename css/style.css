@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Anek Malayalam', sans-serif;
+}
+
+
+
+
+
+/* navbar */
+
+#logo {
+    font-size: 25px;
+    
+    text-shadow: 1px 1px 1px black;
+}
+#logo img{
+    margin-bottom: 10px;
+   
+}
+#logo span{
+    color: #fa7426;
+    text-transform: uppercase;
+}
+.top-navbar{
+	position: relative;
+	z-index: 10;
+    
+}
+
+.top-navbar .navbar{
+	padding: 15px 0px;
+	position: fixed;
+	width: 100%;
+	border-radius: 0px 0px 100px 100px;
+	transition: height .3s ease-out, background .3s ease-out, box-shadow .3s ease-out;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+	z-index: 100;
+}
+
+.top-navbar .navbar-light .navbar-nav .nav-link{
+	color: #070707;
+	font-size: 16px;
+	padding: 10px 20px;
+	border-radius: 60px;
+	text-transform: uppercase;
+}
+
+.top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover{
+	background: #d65106;
+	color: #ffffff;
+}
+.top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link{
+	background: #d65106;
+	color: #ffffff;
+	border-radius: 60px;
+}
+
+.navbar-light .navbar-toggler:hover{
+	background: #d65106;
+}
+/* navbar */
+
+/* home section */
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+   
+}
+.home .img{
+    flex: 1 1 400px;
+}
+.home .img img{
+    width: 100%;
+}
+.home .content{
+    flex:1 1 400px;
+}
+.content h3{
+    margin:  30px 0 0  130px;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px black;
+}
+
+   
+    @media screen and (max-width:896px){
+        .content h3{
+            margin:  150px 0 0  130px; }
+    }
+
+.content p{
+    margin-left: 130px;
+   
+}
+.content .btn{
+    margin-left: 130px;
+    width: 100px;
+    height: 35px;
+    background-color: #d65106;
+    color: white;
+}
+/* home section */
