@@ -70,7 +70,7 @@
 .home{
     display: flex;
     align-items: center;
-    background-image: url('/images/img-01.jpg');
+    background-image: url("/images/img-01.jpg");
     height: 100vh; 
     background-position:center;
    
@@ -91,10 +91,10 @@
 }
 .content h3{
     margin:  30px 0 0  130px;
-    font-size: 30px;
+    font-size: 35px;
     text-shadow: 1px 1px 1px black;
+    color: #ffffff;
 }
-
    
     @media screen and (max-width:896px){
         .content h3{
@@ -103,6 +103,7 @@
 
 .content p{
     margin-left: 130px;
+    color: #ffffff;
    
 }
 .content .btn{
