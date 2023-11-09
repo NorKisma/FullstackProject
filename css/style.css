@@ -17,7 +17,7 @@
 }
 .top-navbar{
 	position: relative;
-	z-index: 10;
+	z-index: 100;
     background-color: #cad2d8;
 }
 .top-navbar .navbar{
@@ -30,7 +30,7 @@
 	transform: translate3d(0, 0, 0);
 	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
 	box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
-	z-index: 100;
+	z-index: 10;
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-link{
@@ -55,22 +55,8 @@
 	background: rgb(248, 26, 92);
 }
 
-#navbar input{
-    border-radius: 6px;
-    margin-left: 200px;
-}
-#btn{
-    
-    padding: 5px;
-    border: 1px solid rgb(248, 26, 92);
-    background: transparent;
-    transition: 0.5s;
-}
-#btn:hover{
-    background: rgb(248, 26, 92);
-    color: white;
-    border-radius: 60px;
-}
+
+
 /* end navbar */
 /* search */
 .search{
@@ -188,3 +174,68 @@
     font-weight: 600;
 }
 /* Top Section End */
+
+/* Our Dishes Strat */
+.Dishes{
+    padding: 100px 11% 100px;
+}
+.Dishes h3{
+    text-align: center;
+    color: #e53937;
+}
+.Dishes h2{
+    text-align: center;
+    color: black;
+    font-weight: 600;
+}
+.Dishes h2 i{
+    color: #e53937;
+}
+.Dishes h6{
+    font-size: 16px;
+}
+.star i{
+    color: orange;
+    font-size: 13px;
+}
+
+
+.Dishes p{
+    margin-top: 5px;
+    font-weight: bold;
+}
+.Dishes p i{
+    float: right;
+    color: #e53937;
+    cursor: pointer;
+}
+/* Our Dishes End */
+
+/* menu */
+#menu{
+    background-color: #f5c9c947;
+    margin-top: 5px;
+    border-radius: 60px;
+    box-shadow: 0 0 5px black;
+}
+#menu h1{
+    color:  #e53937;
+    margin-top: 50px;
+    text-shadow: 1px 1px 1px black;
+    border-bottom: 2px solid  #e53937;
+}
+.container .row{
+    margin-top: 50px;
+}
+#menu p img{
+    border-radius: 30px;
+    width: 50px;
+}
+#menu p{
+    margin-top: 30px;
+}
+#menu p span{
+    color:  #e53937;
+    font-size: 20px;
+}
+/* menu */
