@@ -236,3 +236,117 @@
     font-size: 20px;
 }
 /* menu */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start Footer */
+#footer{
+    padding: 0 0 30px 0;
+    color: #d0d0d0;
+    font-size: 14px;
+    background: #0a0a0a;
+   
+}
+#footer .footer-top{
+    padding: 10px 0 10px;
+    background: #a3959547;
+    color: #fff;
+}
+#footer .footer-top .footer-contact h3{
+    color: #e53937;
+    text-shadow: 1px 1px 1px black;
+}
+#footer .footer-top .footer-contact h4{
+    font-size: 22px;
+    margin: 0 0 30px 0;
+    padding: 2px 0 2px 0;
+    line-height: 1;
+    font-weight: 700;
+}
+#footer .footer-top .footer-contact p{
+    font-size: 14px;
+    margin: 0;
+    line-height: 1;
+    font-weight: 700;
+    color: white;
+}
+#footer .footer-top h4{
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 12px;
+}
+#footer .footer-top .footer-links{
+    margin-bottom: 10px;
+}
+#footer .footer-top .footer-links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#footer .footer-top .footer-links ul li{
+    padding-right: 2px;
+    color:  #e53937;
+    font-size: 18px;
+    line-height: 1;
+}
+#footer .footer-top .footer-links ul li{
+    padding-right: 10px 0;
+    display: flex;
+    align-items: center;
+}
+#footer .footer-top .footer-links ul li:first-child{
+    padding-top: 0;
+}
+#footer .footer-top .footer-links ul li a{
+    color: white;
+    transition: 0.3s ease;
+    display: inline-block;
+    line-height: 2;
+}
+#footer .footer-top .footer-links ul li a:hover{
+    text-decoration: none;
+    color:  #e53937;
+}
+/*
+#footer .footer-top .Social-icons a{
+    font-size: 18px;
+    display: inline-block;
+    background: #3f3d3d;
+    color: #faf7f7;
+    line-height: 1;
+    padding: 8px 0;
+    padding-right: 4px;
+    border-radius: 50px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s ease;
+    
+}
+#footer .footer-top .socail-links a:hover{
+    background:  #e53937;
+    color: white;
+    text-decoration: none;
+}
+*/
+#footer .copyright{
+    text-align: center;
+    float: left;
+}
+#footer .credits{
+    float: right;
+    text-align: center;
+}
+/* End Footer */
+
+
