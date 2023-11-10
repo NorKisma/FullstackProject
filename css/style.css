@@ -60,10 +60,10 @@
 /* search */
 .search{
     height: 40px;
-    width: 120%;
+    width: 140%;
     border-radius: 10px;
     margin-right: -25px;
-    margin-left: 50px;
+    margin-left: 60px;
     border: 2px solid rgb(7, 5, 6);;
 
 }
@@ -74,7 +74,7 @@
     border: none;
     background: rgb(248, 26, 92);
     color: white;
-    border-radius: 40px;
+    border-radius: 30px;
     font-weight: 700;
 }
 /* end search */
