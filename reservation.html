@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+   <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Site Meats -->
+    <title>Som Coffee | Restaurant</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+    <!-- fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@500&display=swap" rel="stylesheet">
+   </head>
+  
+  <body>
+<!-- Start header -->
+<header class="top-navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" id="logo">
+                <img src="./images/logo.png" alt="" width="30px"><span>SomCoffee|Restaurant</span></a>
+                
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbars-rs-food">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                            <a class="dropdown-item" href="reservation.html">Reservation</a>
+                            <a class="dropdown-item" href="stuff.html">Stuff</a>
+                            <a class="dropdown-item" href="gallery.html">Gallery</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <form class="form-inline">
+                <input type="text" placeholder="  Search"class="form-control"/>
+                <button id="btn0" class="btn btn ml-md-2 my-1 my-ms-0">Search </button>
+              </form>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- End header -->
+<!-- Start Reservation -->
+<div class="reservation-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="heading-title text-center my-5">
+                    <h1>Reservation</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 col-xs-12">
+                <div class="contact-block">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Book a table</h3>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input id="input_date" class="datepicker picker__input form-control" 
+                                        name="input-date" type="date"required data-error="Please select Date">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input id="input_time"type="time" class="time form-control picker__input"required data-error="Please select time">
+                                    </div>                                 
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <select class="custom-select d-block form-control" id="person" required data-error="Please select Person">
+                                          <option disabled selected>Select Person*</option>
+                                          <option value="1">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                          <option value="4">4</option>
+                                          <option value="5">5</option>
+                                          <option value="6">6</option>
+                                          <option value="7">7</option>
+                                        </select>
+                                        <div class="help-block with-errors"></div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Contact Details</h3>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
+                                        <div class="help-block with-errors"></div>
+                                    </div>                                 
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="Email" placeholder="Your Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
+                                        <div class="help-block with-errors"></div>
+                                    </div> 
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="Number" placeholder="Your Numbar" id="phone" class="form-control" name="phone" required data-error="Please enter your Numbar">
+                                        <div class="help-block with-errors"></div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="submit-button text-center">
+                                    <button  id="Reservation" type="submit">Book Table</button>
+                                    <div id="msgSubmit" class="h3 text-center hidden"></div> 
+                                    <div class="clearfix"></div> 
+                                </div>
+                            </div>
+                        </div>            
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+<!-- End Reservation -->
+
+ <!-- footer -->
+ <footer id="footer" >
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>Som Coffee & Restaurant</h3>
+                    <p>
+                        Nor <br><br>
+                        Kismayo <br><br>
+                        Somalia <br><br>
+                    </p>
+                    <strong>Phone: <strong>+252617220603</strong></strong>
+                    <strong>Email: <strong>Nor.jws@gmail.com</strong></strong>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                   <h4>Usefull Links</h4>
+                   <ul>
+                    <li><i><a href="#">Home</a></i></li>
+                    <li><i><a href="#">About</a></i></li>
+                    <li><i><a href="#">Contact</a></i></li>
+                    <li><i><a href="#">Services</a></i></li>
+                    <li><i><a href="#">Privacy Policy</a></i></li>
+                   </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Services</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, molestias!
+                        <ul>
+                            <li><i><a href="#">Coffee</a></i></li>
+                            <li><i><a href="#">Chicken</a></i></li>
+                            <li><i><a href="#">Fish</a></i></li>
+                            <li><i><a href="#">Burger</a></i></li>
+                            <li><i><a href="#">Pizza</a></i></li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Social Network</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, ducimus.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="#" class="google-plus"><i class="bx bxl-google-plus"></i></a>
+                        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="container py-4">
+        <div class="copyright">
+            &copy; Copyright <strong><span>Som Coffee & Restaurant</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            Designed By <a href="https://norkisma.github.io/FullstackProject/index.html">Som Coffee & Restaurant</a>
+        </div>
+    </div>
+</footer>
+<!-- footer -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+ <script>
+    $('#prefill').datepicker({
+
+    });  </script>
+
+   
+  </body>
+</html>
