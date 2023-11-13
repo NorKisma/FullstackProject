@@ -192,7 +192,7 @@
 .Dishes h6{
     font-size: 16px;
 }
-.star i{
+.rating i{
     color: orange;
     font-size: 13px;
 }
@@ -277,9 +277,25 @@
     color: white;
     border: 2px solid white;
 }
-
 /* Order Section End */
 
+/* Contact Section Start */
+.contact{
+    padding: 100px 11% 100px;
+}
+.contact .col-md-5{
+    background: #e53937;
+    border-radius: 20px;
+    color: white;
+}
+.contact h3{
+    margin-top: 40px;
+}
+.contact i span{
+    margin-left: 10px;
+    cursor: pointer;
+}
+/* Contact Section End */
 
 
 /* Start Footer */
@@ -295,16 +311,17 @@
     background: #a3959547;
     color: #fff;
 }
-#footer .footer-top .footer-contact h3{
-    color: #e53937;
-    text-shadow: 1px 1px 1px black;
-}
+
 #footer .footer-top .footer-contact h4{
     font-size: 22px;
     margin: 0 0 30px 0;
     padding: 2px 0 2px 0;
     line-height: 1;
     font-weight: 700;
+}
+#footer .footer-top .footer-contact span{
+    color: #e53937;
+    text-shadow: 1px 1px 1px black;
 }
 #footer .footer-top .footer-contact p{
     font-size: 14px;
@@ -313,34 +330,16 @@
     font-weight: 700;
     color: white;
 }
-#footer .footer-top h4{
-    font-size: 16px;
-    font-weight: bold;
-    position: relative;
-    padding-bottom: 12px;
-}
-#footer .footer-top .footer-links{
-    margin-bottom: 10px;
-}
-#footer .footer-top .footer-links ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+
+
 #footer .footer-top .footer-links ul li{
-    padding-right: 2px;
-    color:  #e53937;
     font-size: 18px;
     line-height: 1;
-}
-#footer .footer-top .footer-links ul li{
     padding-right: 10px 0;
     display: flex;
     align-items: center;
 }
-#footer .footer-top .footer-links ul li:first-child{
-    padding-top: 0;
-}
+
 #footer .footer-top .footer-links ul li a{
     color: white;
     transition: 0.3s ease;
@@ -348,8 +347,21 @@
     line-height: 2;
 }
 #footer .footer-top .footer-links ul li a:hover{
-    text-decoration: none;
-    color:  #e53937;
+    
+    color:#e53937;
+    border-radius: 5px;
+}
+#footer .footer-top .footer-links .social-icons i{
+    font-size: 18px;
+    color: white;
+    padding: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#footer .footer-top .footer-links .social-icons i:hover{
+    background: #e53937;
+    color: white;
+    border-radius: 5px;
 }
 
 #footer .copyright{
@@ -359,6 +371,10 @@
 #footer .credits{
     float: right;
     text-align: center;
+}
+#footer .credits :hover{
+    color:#e53937;
+    border-radius: 5px;
 }
 /* End Footer */
 
