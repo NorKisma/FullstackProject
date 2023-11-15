@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">  
@@ -25,10 +25,11 @@
             <div class="container">
                 <a class="navbar-brand" href="index.html" id="logo">
                 <img src="./images/logo.png" alt="" width="30px"><span>SomCoffee|Restaurant</span></a> 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span> </button>
-                <div class="collapse navbar-collapse" id="navbars-rs-food">
-                    <ul class="navbar-nav ml-auto">
+              
+                  <div class="collapse navbar-collapse" id="navbar-rs-food">
+                    <ul class="navbar-nav nav my-3 my-xl-0 px-4 flex-nowrap  ml-auto ">
                         <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
@@ -40,10 +41,14 @@
                        </div>
                         </li>
                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                       <form class="form-inline">
-                         <input type="text" placeholder="  Search"class="form-control"/>
-                          <button id="btn0" class="btn btn ml-md-2 my-1 my-ms-0">Search </button>
+                       <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
+                        <div class="nav-item w-100">
+                        <form class="position-relative" method="GET" action="#">
+                        <input class="form-control pe-5 bg-transparent" type="search" placeholder="  Search Food " aria-label="Search" name="name">
+                        <button class="btn bg-transparent px-2 py-0 position-absolute top-50 end-0 translate-middle-y" type="submit"><i class="fas fa-search fs-6 "></i> </button>
                         </form>
+                        </div>
+                        </div>
                     </ul>
                 </div>
             </div>
