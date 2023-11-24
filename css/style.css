@@ -287,6 +287,10 @@
     color: white;
     border: 2px solid white;
 }
+.Reservation1{
+
+float:center;
+}
 /* Order Section End */
 
 
@@ -331,6 +335,7 @@
     margin-left: 10px;
     cursor: pointer;
 }
+
 /* Contact Section End */
 
 
