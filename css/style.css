@@ -221,6 +221,7 @@
 }
 #gallery .card img:hover{
     transform: translateY(-15px);
+    
 }
 /* gallery */
 
