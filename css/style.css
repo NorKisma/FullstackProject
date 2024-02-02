@@ -1,58 +1,51 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Anek Malayalam', sans-serif;
 }
-/* navbar logo */ 
-#logo {
-    font-size: 22px;    
-    text-shadow: 1px 1px 1px black;
-    
-    
-}
-#logo img{
-    margin-bottom: 10px;  
-    margin-left: 0px; 
-}
-#logo span{
-    color: #fa26a2; 
-    
-}
-/*end  navbar logo */
 
-.top-navbar{
-	position: relative;
+/* Navbar logo */
+#logo {
+    font-size: 22px;
+    text-shadow: 1px 1px 1px black;
+}
+
+#logo img {
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+#logo span {
+    color: #fa26a2;
+}
+
+/* Top Navbar */
+.top-navbar {
+    position: relative;
     background-color: #cad2d8;
 }
-.top-navbar .navbar{
+
+.top-navbar .navbar {
     width: 100%;
-    padding: 15px 0px;
-    border-radius: 50px 50px 50px 50px;
+    padding: 15px 0;
+    border-radius: 50px;
     box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
-	
-    
-}
-.top-navbar .navbar-light .navbar-nav .nav-link{
-	color: #070707;
-	text-transform: uppercase;
-    border-radius: 60px;
-}
-.top-navbar .navbar-light .navbar-nav .dropdown-item{
-	color: #070707;
-	text-transform: uppercase;
-    border-radius: 60px;
-}
-.top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover{
-	background: rgb(248, 26, 92);
-	color: #ffffff;
-    
-}
-.top-navbar .navbar-light .navbar-nav .nav-item .dropdown-item:hover{
-	background: rgb(248, 26, 92);
-	color: #ffffff;
 }
 
-#btn0{
+.top-navbar .navbar-light .navbar-nav .nav-link,
+.top-navbar .navbar-light .navbar-nav .dropdown-item {
+    color: #070707;
+    text-transform: uppercase;
+    border-radius: 60px;
+}
+
+.top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover,
+.top-navbar .navbar-light .navbar-nav .nav-item .dropdown-item:hover {
+    background: rgb(248, 26, 92);
+    color: #ffffff;
+}
+
+#btn0 {
     background: transparent;
     border: 2px solid #e53937;
     color: #e53937;
@@ -61,51 +54,51 @@
     transition: 0.5s;
     cursor: pointer;
 }
-#btn0:hover{
+
+#btn0:hover {
     background: #e53937;
     color: white;
     border: 2px solid white;
 }
-/*end  navbar */
 
-
-/* home section */
-.home{
-   
+/* Home Section */
+.home {
     display: flex;
     align-items: center;
-    height: 90vh; 
+    height: 90vh;
     background-position: center;
     justify-content: center;
     flex-wrap: wrap;
     position: relative;
-    z-index: 0;  
+    z-index: 0;
     background-color: #b7cada;
 }
 
-.home img{
+.home img {
     width: 400px;
     flex: 1 1 400px;
 }
 
-.home .content{
-    flex:1 1 300px;
+.home .content {
+    flex: 1 1 300px;
 }
-.content h3{
+
+.content h3 {
     margin-left: 100px;
     font-size: 35px;
     text-shadow: 1px 1px 1px black;
 }
-.content h3 span{
+
+.content h3 span {
     color: rgb(248, 26, 92);
 }
-.content p{
+
+.content p {
     margin-left: 100px;
     color: #161616;
 }
-  
 
-.content .btn{
+.content .btn {
     margin-left: 130px;
     padding: 6px;
     background: transparent;
@@ -114,137 +107,151 @@
     color: #e53937;
     transition: 0.5s;
     cursor: pointer;
-    width: 200px
+    width: 200px;
 }
-.content .btn:hover{
+
+.content .btn:hover {
     background: #e53937;
     color: white;
-    
 }
 
-  @media screen and (max-width:667px), (max-width:1024px){
-         .content h3{
-            margin:130px 0 0  30px; }
-        .content p{
-                margin-left: 30px;
-                }
-        .home .img img{
-         margin-top: 0px;
-         width: 90%;
-                }        
+@media screen and (max-width: 667px), (max-width: 1024px) {
+    .content h3 {
+        margin: 130px 0 0 30px;
     }
 
-/* home section */
+    .content p {
+        margin-left: 30px;
+    }
 
+    .home img {
+        margin-top: 0;
+        width: 90%;
+    }
+}
 
-/* Top Section Start */
-.top-section{
+/* Top Section */
+.top-section {
     padding: 10px 100px;
     margin-top: 10px;
 }
-.top-section h5{
+
+.top-section h5 {
     color: rgb(248, 26, 92);
     text-align: center;
     font-weight: 100;
 }
-.top-section h3{
+
+.top-section h3 {
     color: black;
     text-align: center;
     font-weight: 600;
 }
-.top-section .row{
+
+.top-section .row {
     margin-top: 30px;
     align-items: center;
 }
-.top-section .row .card{
+
+.top-section .row .card {
     border: none;
 }
-.top-section .row .card img{
+
+.top-section .row .card img {
     width: 200px;
     margin: auto;
 }
-.top-section .card-body{
+
+.top-section .card-body {
     text-align: center;
 }
-.top-section .card-body h1{
+
+.top-section .card-body h1 {
     font-size: 25px;
     font-weight: 600;
 }
-/* Top Section End */
 
-/* Our Dishes Strat */
-.Dishes{
+/* Our Dishes */
+.Dishes {
     padding: 100px 11% 100px;
 }
-.Dishes h1{
+
+.Dishes h1 {
     margin-top: 20px;
     text-align: center;
     color: #e53937;
 }
-.Dishes h2{
+
+.Dishes h2 {
     text-align: center;
     color: black;
     font-weight: 600;
 }
-.Dishes h2 i{
+
+.Dishes h2 i {
     color: #e53937;
 }
-.Dishes h6{
+
+.Dishes h6 {
     font-size: 16px;
 }
-.rating i{
+
+.rating i {
     color: orange;
     font-size: 13px;
 }
 
-
-.Dishes p{
+.Dishes p {
     margin-top: 5px;
     font-weight: bold;
 }
-.Dishes p i{
+
+.Dishes p i {
     float: right;
     color: #e53937;
     cursor: pointer;
 }
-/* Our Dishes End */
 
-/* gallery */
-#gallery h1{
+/* Gallery */
+#gallery h1 {
     margin-top: 80px;
     text-shadow: 1px 1px 1px black;
     border-bottom: 2px solid #e53937;
 }
-#gallery .card img{
+
+#gallery .card img {
     transition: 0.5s ease;
     cursor: pointer;
 }
-#gallery .card img:hover{
-    transform: translateY(-15px);
-    
-}
-/* gallery */
 
-/* Order Section Start */
-.order{
+#gallery .card img:hover {
+    transform: translateY(-15px);
+}
+
+/* Order Section */
+.order {
     padding: 100px 11% 100px;
 }
-.heading{
+
+.heading {
     text-align: center;
     font-size: 30px;
     font-weight: 700;
 }
-.heading span{
+
+.heading span {
     color: #e53937;
 }
-.order textarea{
+
+.order textarea {
     resize: none;
 }
-.reservation-box h1{
+
+.reservation-box h1 {
     color: rgb(248, 26, 92);
 }
 
-#Reservation{
+#Reservation {
     padding: 6px;
     background: transparent;
     border: 2px solid #e53937;
@@ -254,32 +261,33 @@
     cursor: pointer;
     width: 200px;
 }
-#Reservation:hover{
+
+#Reservation:hover {
     background: #e53937;
     color: white;
     border: 2px solid white;
 }
-.Reservation1{
 
-float:center;
+.Reservation1 {
+    margin: auto;
 }
-/* Order Section End */
 
-
-
-/* about us */
-#about h1{
+/* About Us */
+#about h1 {
     margin-top: 100px;
     text-shadow: 1px 1px 1px black;
     border-bottom: 2px solid #e53937;
 }
-#about span{
-    color:  #e53937;
+
+#about span {
+    color: #e53937;
 }
-#Read{
+
+#Read {
     margin-top: 20px;
 }
-#Read button{
+
+#Read button {
     width: 150px;
     height: 33px;
     background-color: #e53937;
@@ -288,55 +296,55 @@ float:center;
     border: none;
     cursor: pointer;
 }
-/* about us */
 
-
-/* Contact Section Start */
-.contact{
+/* Contact Section */
+.contact {
     padding: 100px 11% 100px;
 }
-.contact .col-md-5{
+
+.contact .col-md-5 {
     background: #e53937;
     border-radius: 20px;
     color: white;
 }
-.contact h3{
+
+.contact h3 {
     margin-top: 40px;
 }
-.contact i span{
+
+.contact i span {
     margin-left: 10px;
     cursor: pointer;
 }
 
-/* Contact Section End */
-
-
-/* Start Footer */
-#footer{
+/* Footer */
+#footer {
     padding: 0 0 30px 0;
     color: #d0d0d0;
     font-size: 14px;
     background: #0a0a0a;
-   
 }
-#footer .footer-top{
+
+#footer .footer-top {
     padding: 10px 0 10px;
     background: #a3959547;
     color: #fff;
 }
 
-#footer .footer-top .footer-contact h4{
+#footer .footer-top .footer-contact h4 {
     font-size: 22px;
     margin: 0 0 30px 0;
     padding: 2px 0 2px 0;
     line-height: 1;
     font-weight: 700;
 }
-#footer .footer-top .footer-contact span{
+
+#footer .footer-top .footer-contact span {
     color: #e53937;
     text-shadow: 1px 1px 1px black;
 }
-#footer .footer-top .footer-contact p{
+
+#footer .footer-top .footer-contact p {
     font-size: 14px;
     margin: 0;
     line-height: 1;
@@ -344,8 +352,7 @@ float:center;
     color: white;
 }
 
-
-#footer .footer-top .footer-links ul li{
+#footer .footer-top .footer-links ul li {
     font-size: 18px;
     line-height: 1;
     padding-right: 10px 0;
@@ -353,42 +360,86 @@ float:center;
     align-items: center;
 }
 
-#footer .footer-top .footer-links ul li a{
+#footer .footer-top .footer-links ul li a {
     color: white;
     transition: 0.3s ease;
     display: inline-block;
     line-height: 2;
 }
-#footer .footer-top .footer-links ul li a:hover{
-    
-    color:#e53937;
+
+#footer .footer-top .footer-links ul li a:hover {
+    color: #e53937;
     border-radius: 5px;
 }
-#footer .footer-top .footer-links .social-icons i{
+
+#footer .footer-top .footer-links .social-icons i {
     font-size: 18px;
     color: white;
     padding: 10px;
     transition: 0.5s;
     cursor: pointer;
 }
-#footer .footer-top .footer-links .social-icons i:hover{
+
+#footer .footer-top .footer-links .social-icons i:hover {
     background: #e53937;
     color: white;
     border-radius: 5px;
 }
 
-#footer .copyright{
+#footer .copyright {
     text-align: center;
     float: left;
 }
-#footer .credits{
+
+#footer .credits {
     float: right;
     text-align: center;
 }
-#footer .credits :hover{
-    color:#e53937;
+
+#footer .credits :hover {
+    color: #e53937;
     border-radius: 5px;
 }
-/* End Footer */
 
+/* Dark mode styles */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
 
+.dark-mode h1, h2, h3 {
+    color: #fff;
+}
+
+.dark-mode p {
+    color: #fff;
+}
+
+.dark-mode header {
+    background-color: #555;
+}
+
+.dark-mode .col-md-3 {
+    background-color: #555;
+}
+
+.dark-mode .card-body {
+    background-color: #555;
+    color: #f7f2f2;
+}
+
+.dark-mode nav a {
+    color: #f7f2f2;
+}
+.dark-mode  form-control { 
+    background-color: #555;
+    color: #f7f2f2;
+}
+.dark-mode section {
+    background-color: #444;
+    color: #f7f2f2;
+}
+
+.dark-mode footer {
+    background-color: #555;
+}

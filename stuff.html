@@ -42,6 +42,8 @@
                         </li>
                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                        <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
+                        <button id="darkModeToggle" onclick="toggleDarkMode()">Dark</button>
+   
                         <div class="nav-item w-100">
                         <form class="position-relative" method="GET" action="#">
                         <input class="form-control pe-5 bg-transparent" type="search" placeholder="  Search Food " aria-label="Search" name="name">
@@ -207,6 +209,12 @@
 
     
 
+<script>
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle("dark-mode");
+  }
+  </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
