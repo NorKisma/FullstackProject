@@ -13,6 +13,9 @@
      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <!-- fonts -->
    <link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@500&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -42,7 +45,7 @@
                         </li>
                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                        <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
-                        <button id="darkModeToggle" onclick="toggleDarkMode()">Dark</button>
+                        
    
                         <div class="nav-item w-100">
                         <form class="position-relative" method="GET" action="#">
@@ -51,7 +54,11 @@
                         </form>
                         </div>
                         </div>
+                       
                     </ul>
+                    <button id="darkModeToggle" onclick="toggleDarkMode()" class="arrow-button">
+                      <span>&#9660;</span> <!-- Unicode down arrow character -->
+                    </button>
                 </div>
             </div>
         </nav>
@@ -64,7 +71,7 @@
       <p> Where we strive to provide  a memorable dining experience! 
         
             </p>
-        <a href="#order"  class="btn">Order Now</a>
+        <a href="#toggleOrderSection"  class="btn">Order Now</a>
         </div>
 
       <!-- courser for the showcase -->
@@ -331,7 +338,10 @@
 
 
 <!-- Order Section Start -->
-<section class="order" id="order">
+<button id="toggleOrderSection">Order Now</button>
+<section class="order" id="order" style="display: none;">
+  
+
   <div class="heading">Order Your <span>Food | Coffee</span></div>
  
   <div class="row">
@@ -381,6 +391,7 @@
 
   </div>
 </section>
+
 <!-- Order Section End -->
 
 
@@ -491,13 +502,76 @@
 <!-- footer -->
 
 
+ <script>
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+      
+            const isDarkMode = body.classList.contains("dark-mode");
+            localStorage.setItem("darkMode", isDarkMode);
+        }
 
-<script>
-  function toggleDarkMode() {
-    const body = document.body;
-    body.classList.toggle("dark-mode");
-}
-</script>
+        const isDarkMode = localStorage.getItem("darkMode") === "true";
+        if (isDarkMode) {
+            document.body.classList.add("dark-mode");
+        }
+
+
+
+
+
+        $(document).ready(function() {
+          $('#toggleOrderSection').click(function() {
+            $('#order').toggle();
+          });
+        });
+        
+        
+        $(document).ready(function() {
+          $('#order form').submit(function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Process form data (replace this with your actual form processing logic)
+            var formData = {
+              name: $('#name').val(),
+              email: $('#email').val(),
+              number: $('#number').val(),
+              person: $('#person').val(),
+              date: $('#input_date').val(),
+              comment: $('#comment').val()
+            };
+        
+            // Display response popup
+            var responseMessage = 'Thank you for your order, ' + formData.name + '!'; // Customize the response message as needed
+            $('<div></div>').appendTo('body')
+              .html('<div>' + responseMessage + '</div>')
+              .dialog({
+                modal: true,
+                title: 'Order Confirmation',
+                zIndex: 10000,
+                autoOpen: true,
+                width: 'auto',
+                resizable: false,
+                buttons: {
+                  Ok: function() {
+                    $(this).dialog('close');
+                  }
+                },
+                close: function(event, ui) {
+                  $(this).remove();
+                }
+              });
+            
+            // Reset form fields
+            $('#order form')[0].reset();
+          });
+        });
+        
+        
+    </script>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

@@ -44,7 +44,25 @@
     background: rgb(248, 26, 92);
     color: #ffffff;
 }
+#toggleOrderSection{
+    margin-top: 10px;
+    width: 100%;
+    padding: 15px 0;
+    background: transparent;
+    
+    border: 2px solid #e53937;
+    color: #e53937;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: 0.5s;
+    cursor: pointer;
+}
 
+#toggleOrderSection:hover {
+    background: #e53937;
+    color: white;
+    border: 2px solid white;
+}
 #btn0 {
     background: transparent;
     border: 2px solid #e53937;
@@ -272,6 +290,41 @@
     margin: auto;
 }
 
+
+/* Add custom styles for the response popup */
+.ui-dialog {
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .ui-dialog-titlebar {
+    background-color: #007bff;
+    color: #fff;
+    border-bottom: 1px solid #0056b3;
+  }
+  
+  .ui-dialog-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .ui-dialog-buttonset button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 15px;
+    font-size: 16px;
+  }
+  
+  .ui-dialog-buttonset button:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+  }
+  
+
 /* About Us */
 #about h1 {
     margin-top: 100px;
@@ -402,11 +455,31 @@
 }
 
 /* Dark mode styles */
+
+
+.arrow-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 16px; /* Adjust size as needed */
+  }
+  
+  .arrow-button span {
+    margin-left: 10px; /* Adjust spacing between arrow and text */
+  }
+  .arrow-button:hover{
+    background: rgb(228, 95, 134);
+    color: #ffffff;
+   
+}
+  
+
 .dark-mode {
     background-color: #333;
     color: #fff;
 }
-
+ 
 .dark-mode h1, h2, h3 {
     color: #fff;
 }
@@ -415,8 +488,13 @@
     color: #fff;
 }
 
-.dark-mode header {
+
+.dark-mode .top-navbar .navbar.container {
     background-color: #555;
+}
+.dark-mode .fixed-top {
+    background-color: #555;
+    color: #fff;
 }
 
 .dark-mode .col-md-3 {
