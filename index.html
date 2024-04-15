@@ -507,6 +507,7 @@
         function toggleDarkMode() {
             const body = document.body;
             body.classList.toggle("dark-mode");
+<<<<<<< HEAD
       
             const isDarkMode = body.classList.contains("dark-mode");
             localStorage.setItem("darkMode", isDarkMode);
@@ -572,6 +573,21 @@
     </script>
 
 
+=======
+            
+            // Check if dark mode is enabled and store in local storage
+            const isDarkMode = body.classList.contains("dark-mode");
+            localStorage.setItem("darkMode", isDarkMode);
+        }
+
+        // Check local storage for user's preferred theme
+        const isDarkMode = localStorage.getItem("darkMode") === "true";
+        if (isDarkMode) {
+            // If dark mode is enabled, apply it
+            document.body.classList.add("dark-mode");
+        }
+    </script>
+>>>>>>> 2a15ed71c2b3a8a6f0c465f731e079ef2b8e4a84
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
