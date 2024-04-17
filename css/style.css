@@ -530,13 +530,7 @@
     
 }
 
-.dark-mode .navbar-brand {
-    background-color: #444; /* Dark background color */
-}
-.dark-mode #logo span {
-   
-    color: #fff; /* Navbar link color */
-}
+
 
 .dark-mode .navbar-collapse .nav-item.active .nav-link {
     
