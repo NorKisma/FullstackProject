@@ -18,55 +18,54 @@
 
 
 
+    $(document).ready(function() {
+        // Show the popup form when the button is clicked
+        $('#toggleOrder').click(function() {
+          $('#orderDialog').show();
+        });
+       
+        $('.close').click(function() {
+          $('#orderDialog').hide();
+        });
+        
+        $('#orderForm').submit(function(event) {
+          event.preventDefault(); 
+       
+          $('#responseForm').show();
+          
+        });
+      });
+    
+      $(document).ready(function() {
+        // Close the response form when the close button is clicked
+        $('.close-response').click(function() {
+            $('#responseForm').hide();
+            $('#orderDialog').hide();
+          $('#orderForm')[0].reset();
+            
+        });
+    });
+    
 
-    $(document).ready(function() {
-      $('#toggleOrderSection').click(function() {
-        $('#order').toggle();
-      });
-    });
-    
-    
-    $(document).ready(function() {
-      $('#order form').submit(function(event) {
-        event.preventDefault(); // Prevent form submission
-        
-        // Process form data (replace this with your actual form processing logic)
-        var formData = {
-          name: $('#name').val(),
-          email: $('#email').val(),
-          number: $('#number').val(),
-          person: $('#person').val(),
-          date: $('#input_date').val(),
-          comment: $('#comment').val()
-        };
-    
-        // Display response popup
-        var responseMessage = 'Thank you for your order, ' + formData.name + '!'; // Customize the response message as needed
-        $('<div></div>').appendTo('body')
-          .html('<div>' + responseMessage + '</div>')
-          .dialog({
-            modal: true,
-            title: 'Order Confirmation',
-            zIndex: 10000,
-            autoOpen: true,
-            width: 'auto',
-            resizable: false,
-            buttons: {
-              Ok: function() {
-                $(this).dialog('close');
-              }
-            },
-            close: function(event, ui) {
-              $(this).remove();
-            }
-          });
-        
-        // Reset form fields
-        $('#order form')[0].reset();
-      });
-    });
-    
-    
+
+
+  
+
+   
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

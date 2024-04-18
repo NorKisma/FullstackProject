@@ -9,6 +9,7 @@
     <title>Som Coffee | Restaurant</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="javascript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -72,7 +73,7 @@
       <p> Where we strive to provide  a memorable dining experience! 
         
             </p>
-        <a href="#toggleOrderSection"  class="btn">Order Now</a>
+        <a href="#"id="toggleOrder" class="btn">Order Now</a>
         </div>
 
       <!-- courser for the showcase -->
@@ -338,62 +339,74 @@
 <!-- gallery -->
 
 
-<!-- Order Section Start -->
-<button id="toggleOrderSection">Order Now</button>
-<section class="order" id="order" style="display: none;">
-  
 
-  <div class="heading">Order Your <span>Food | Coffee</span></div>
- 
-  <div class="row">
-    <div class="col-md-5 py-3 py-md-0">
-      <div class="card">
-        <img src="./images/img1.png" alt="">
+
+<!-- start popup-form -->
+
+
+<div id="orderDialog" class="popup-form">
+  <div class="popup-content">
+    <span class="close">&times;</span>
+    <div class="heading">Order Your <span>Food | Coffee</span></div>
+    <div class="row">
+      <div class="col-md-5 py-3 py-md-0">
+        <div class="card">
+          <img src="./images/img1.png" alt="">
+        </div>
+      </div>
+      <div class="col-md-7 py-3 py-md-0">
+        <form action="#" id="orderForm">
+          <!-- Your form fields here -->
+          <div class="mb-4">
+            <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
+          </div>
+          <div class="mb-4">
+            <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+          </div>
+          <div class="mb-4">
+            <input type="number" class="form-control" id="number" placeholder="Enter Number" required>
+          </div>
+          <div class="mb-4">
+            <select class="custom-select d-block form-control" id="person" required data-error="Please select Person">
+              <option disabled selected>Select Person*</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+          </div> 
+          <div class="mb-4">
+            <input id="input_date" class="form-control" name="input-date" type="datetime-local" required data-error="Please select Date">
+          </div>
+          <div class="mb-5">   
+            <textarea class="form-control" id="comment" rows="5" name="text" placeholder="Enter Address" required></textarea>
+          </div>
+          <div class="mb-5">
+            <button type="submit" id="Reservation" class="order-btn">Order Now</button>
+          </div>
+        </form>
       </div>
     </div>
-    
-    <div class="col-md-7 py-3 py-md-0">
-      <form action="#">
-        <div class="mb-4">
-          <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
-        </div>
-
-        <div class="mb-4">
-          <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
-        </div>
-
-        <div class="mb-4">
-          <input type="number" class="form-control" id="number" placeholder="Enter Number" required>
-        </div>
-        <div class="mb-4">
-          <select class="custom-select d-block form-control" id="person" required data-error="Please select Person">
-            <option disabled selected>Select Person*</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-          </select>
-            </div> 
-            <div class="mb-4">
-              <input id="input_date" class="datepicker picker__input form-control" 
-              name="input-date" type="datetime-local"required data-error="Please select Date">
-            </div>
-        <div class="mb-5">   
-<textarea  class="form-control" id="comment" rows="5" name="text" placeholder="Enter Address" required></textarea>
-        </div>
-         <div class="mb-5">
-  <button type="submit" id="Reservation" class="order-btn">Order Now</button>
-         </div>
-      </form>
-    </div>
-
   </div>
-</section>
+</div>
 
-<!-- Order Section End -->
+
+
+<div id="responseForm" class="response-form" style="display: none;">
+  <div class="response-content">
+      <span class="close-response">&times;</span>
+      <h2>Thank You!</h2>
+      <p>Your order has been submitted successfully.</p>
+      <!-- Additional response content can be added here -->
+  </div>
+</div>
+
+ <!-- end popup-form -->
+
+
 
 
 <!-- Contact Section Start -->
@@ -504,7 +517,39 @@
 
 
 
+<script>
+  $(document).ready(function() {
+    $('#toggleOrder').click(function() {
+      $('#orderDialog').show();
+    });
+    $('.close').click(function() {
+      $('#orderDialog').hide();
+    });
+    
+    $('#orderForm').submit(function(event) {
+      event.preventDefault(); 
+    
+      
+      // Display the response form
+      $('#responseForm').show();
+     
+    });
+  });
+
+  $(document).ready(function() {
+    // Close the response form when the close button is clicked
+    $('.close-response').click(function() {
+      $('#responseForm').hide();
+            $('#orderDialog').hide();
+          $('#orderForm')[0].reset();
+        
+    });
+});
+
+</script>
+
  
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
