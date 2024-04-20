@@ -163,7 +163,7 @@
             <i class="fa-solid fa-star checked"></i>
           </div>
 
-          <p>$6 <i class="fa-solid fa-credit-card"></i></p>
+          <p>$6 <i class="fa-solid fa-credit-card"id="showCreditCardForm8"></i></p>
         </div>
       </div>
     </div>
@@ -182,7 +182,7 @@
             <i class="fa-solid fa-star checked"></i>
           </div>
 
-          <p>$5.00 <i class="fa-solid fa-credit-card"></i></p>
+          <p>$5.00 <i class="fa-solid fa-credit-card"id="showCreditCardForm7"></i></p>
         </div>
       </div>
     </div>
@@ -200,7 +200,7 @@
             <i class="fa-solid fa-star checked"></i>
           </div>
 
-          <p>$2.00 <i class="fa-solid fa-credit-card"></i></p>
+          <p>$2.00 <i class="fa-solid fa-credit-card"id="showCreditCardForm6"></i></p>
         </div>
       </div>
     </div>
@@ -218,7 +218,7 @@
             <i class="fa-solid fa-star checked"></i>
           </div>
 
-          <p>$3.0<i class="fa-solid fa-credit-card"></i></p>
+          <p>$3.0<i class="fa-solid fa-credit-card"id="showCreditCardForm5"></i></p>
         </div>
       </div>
     </div>
@@ -237,10 +237,51 @@
             <i class="fa-solid fa-star checked"></i>
             <i class="fa-solid fa-star checked"></i>
           </div>
-             <p>$1.5 <i class="fa-solid fa-credit-card"></i></p>
+             <p>$1.5 <i class="fa-solid fa-credit-card"id="showCreditCardForm4"></i></p>
+            
             </div>
       </div>
+        <!-- Credit Card Order Form-->
+
+        <div id="creditCardPopup" class="popup-form1">
+          <div class="popup-content1">
+            <span class="close1">&times;</span>
+            <div class="heading">Order Your <span>Food | Coffee</span></div>
+            <!-- Credit Card Order Form -->
+            <form id="creditCardOrderForm" action="#">
+              <div class="mb-3">
+                <input type="text" class="form-control" id="cardholderName" placeholder="Cardholder Name" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="cardNumber" placeholder="Card Number" required>
+              </div>
+              <div class="mb-3">
+                <input type="date" class="form-control" id="expiryDate" placeholder="Expiry Date (MM/YY)" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="cvv" placeholder="CVV" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Order with Credit Card</button>
+            </form>
+            <!-- End Credit Card Order Form -->
+          </div>
+        </div>
+        <div id="responseForm" class="response-form" style="display: none;">
+          <div class="response-content">
+            <span class="close-response">&times;</span>
+            <h2>Thank You!</h2>
+            <p>Your order has been submitted successfully.</p>
+            <p>Additional Response Content:</p>
+            <ul>
+              <li>Track your order status <a href="#">here</a>.</li>
+              <li>View other available products <a href="menu.html">here</a>.</li>
+            </ul>
+          </div>
+        </div>
+        
+<!-- End Credit Card Order Form -->
     </div>
+    
 
     <div class="col-md-3 py-3 py-md-0 my-1">
       <div class="card">
@@ -256,7 +297,7 @@
             <i class="fa-solid fa-star checked"></i>
           </div>
 
-          <p>$10 <i class="fa-solid fa-credit-card"></i></p>
+          <p>$10 <i class="fa-solid fa-credit-card"id="showCreditCardForm3"></i></p>
         </div>
       </div>
     </div>
@@ -274,7 +315,7 @@
             <i class="fa-solid fa-star checked"></i>
             <i class="fa-solid fa-star checked"></i>
           </div>
-          <p>$1.50 <i class="fa-solid fa-credit-card"></i></p>
+          <p>$1.50 <i class="fa-solid fa-credit-card"id="showCreditCardForm2"></i></p>
         </div>
       </div>
     </div>
@@ -291,7 +332,7 @@
             <i class="fa-solid fa-star checked"></i>
             <i class="fa-solid fa-star checked"></i>
           </div>
-          <p>$3.00 <i class="fa-solid fa-credit-card"></i></p>
+          <p>$3.00 <i class="fa-solid fa-credit-card"id="showCreditCardForm1"></i></p>
         </div>
       </div>
     </div>
@@ -392,17 +433,20 @@
     </div>
   </div>
 </div>
-
-
-
+ <!-- end popup-form -->
 <div id="responseForm" class="response-form" style="display: none;">
   <div class="response-content">
-      <span class="close-response">&times;</span>
-      <h2>Thank You!</h2>
-      <p>Your order has been submitted successfully.</p>
-      <!-- Additional response content can be added here -->
+    <span class="close-response">&times;</span>
+    <h2>Thank You!</h2>
+    <p>Your order has been submitted successfully.</p>
+    <p>Additional Response Content:</p>
+    <ul>
+      <li>Track your order status <a href="#">here</a>.</li>
+      <li>View other available products <a href="menu.html">here</a>.</li>
+    </ul>
   </div>
 </div>
+
 
  <!-- end popup-form -->
 
@@ -544,6 +588,43 @@
           $('#orderForm')[0].reset();
         
     });
+});
+
+
+$(document).ready(function() {
+
+  function showCreditCardPopup() {
+    $('#creditCardPopup').show();
+  }
+
+  function hideCreditCardPopup() {
+    $('#creditCardPopup').hide();
+  }
+
+ $('#showCreditCardForm, #showCreditCardForm8, #showCreditCardForm7, #showCreditCardForm6, #showCreditCardForm5, #showCreditCardForm4, #showCreditCardForm3, #showCreditCardForm2, #showCreditCardForm1').click(showCreditCardPopup);
+ 
+ $('#creditCardOrderForm').submit(function(event) {
+  event.preventDefault(); 
+  // Display the response form
+  $('#responseForm').show();
+
+ 
+});
+
+  $('.close1').click(hideCreditCardPopup);
+
+ 
+  
+});
+$(document).ready(function() {
+  // Close the response form when the close button is clicked
+  $('.close-response').click(function() {
+    $('#responseForm').hide();
+    $('#creditCardOrderForm')[0].reset();
+    $('#creditCardPopup').hide();
+        
+      
+  });
 });
 
 </script>

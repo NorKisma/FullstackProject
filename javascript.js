@@ -47,6 +47,81 @@
     });
     
 
+    $(document).ready(function() {
+      // Show the credit card popup form when the button is clicked
+      $('#showCreditCardForm').click(function() {
+        $('#creditCardPopup').show();
+      });
+      $('.close1').click(function() {
+        $('#creditCardPopup').hide();
+      });
+    
+      // Show the credit card popup form when the button is clicked
+      $('#showCreditCardForm8').click(function() {
+        $('#creditCardPopup').show();
+      });
+      $('.close1').click(function() {
+        $('#creditCardPopup').hide();
+      });
+    
+      // Show the credit card popup form when the button is clicked
+      $('#showCreditCardForm7').click(function() {
+        $('#creditCardPopup').show();
+      });
+      $('.close1').click(function() {
+        $('#creditCardPopup').hide();
+      });
+    
+      // Show the credit card popup form when the button is clicked
+      $('#showCreditCardForm6').click(function() {
+        $('#creditCardPopup').show();
+      });
+      $('.close1').click(function() {
+        $('#creditCardPopup').hide();
+      });
+    
+      // Show the credit card popup form when the button is clicked
+      $('#showCreditCardForm5').click(function() {
+        $('#creditCardPopup').show();
+      });
+      $('.close1').click(function() {
+        $('#creditCardPopup').hide();
+      });
+    
+      // Show the credit card popup form when the button is clicked
+      $('#showCreditCardForm4').click(function() {
+        $('#creditCardPopup').show();
+      });
+      $('.close1').click(function() {
+        $('#creditCardPopup').hide();
+      });
+    
+      // Show the credit card popup form when the button is clicked
+      $('#showCreditCardForm3').click(function() {
+        $('#creditCardPopup').show();
+      });
+      $('.close1').click(function() {
+        $('#creditCardPopup').hide();
+      });
+    
+      // Show the credit card popup form when the button is clicked
+      $('#showCreditCardForm2').click(function() {
+        $('#creditCardPopup').show();
+      });
+      $('.close1').click(function() {
+        $('#creditCardPopup').hide();
+      });
+    
+      // Show the credit card popup form when the button is clicked
+      $('#showCreditCardForm1').click(function() {
+        $('#creditCardPopup').show();
+      });
+      $('.close1').click(function() {
+        $('#creditCardPopup').hide();
+      });
+    });
+    
+
 
 
   
