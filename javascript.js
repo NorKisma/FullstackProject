@@ -48,79 +48,40 @@
     
 
     $(document).ready(function() {
-      // Show the credit card popup form when the button is clicked
-      $('#showCreditCardForm').click(function() {
+
+      function showCreditCardPopup() {
         $('#creditCardPopup').show();
-      });
-      $('.close1').click(function() {
-        $('#creditCardPopup').hide();
-      });
+      }
     
-      // Show the credit card popup form when the button is clicked
-      $('#showCreditCardForm8').click(function() {
-        $('#creditCardPopup').show();
-      });
-      $('.close1').click(function() {
+      function hideCreditCardPopup() {
         $('#creditCardPopup').hide();
-      });
+      }
     
-      // Show the credit card popup form when the button is clicked
-      $('#showCreditCardForm7').click(function() {
-        $('#creditCardPopup').show();
-      });
-      $('.close1').click(function() {
-        $('#creditCardPopup').hide();
-      });
+     $('#showCreditCardForm, #showCreditCardForm8, #showCreditCardForm7, #showCreditCardForm6, #showCreditCardForm5, #showCreditCardForm4, #showCreditCardForm3, #showCreditCardForm2, #showCreditCardForm1').click(showCreditCardPopup);
+     
+     $('#creditCardOrderForm').submit(function(event) {
+      event.preventDefault(); 
+      // Display the response form
+      $('#responseForm').show();
     
-      // Show the credit card popup form when the button is clicked
-      $('#showCreditCardForm6').click(function() {
-        $('#creditCardPopup').show();
-      });
-      $('.close1').click(function() {
-        $('#creditCardPopup').hide();
-      });
-    
-      // Show the credit card popup form when the button is clicked
-      $('#showCreditCardForm5').click(function() {
-        $('#creditCardPopup').show();
-      });
-      $('.close1').click(function() {
-        $('#creditCardPopup').hide();
-      });
-    
-      // Show the credit card popup form when the button is clicked
-      $('#showCreditCardForm4').click(function() {
-        $('#creditCardPopup').show();
-      });
-      $('.close1').click(function() {
-        $('#creditCardPopup').hide();
-      });
-    
-      // Show the credit card popup form when the button is clicked
-      $('#showCreditCardForm3').click(function() {
-        $('#creditCardPopup').show();
-      });
-      $('.close1').click(function() {
-        $('#creditCardPopup').hide();
-      });
-    
-      // Show the credit card popup form when the button is clicked
-      $('#showCreditCardForm2').click(function() {
-        $('#creditCardPopup').show();
-      });
-      $('.close1').click(function() {
-        $('#creditCardPopup').hide();
-      });
-    
-      // Show the credit card popup form when the button is clicked
-      $('#showCreditCardForm1').click(function() {
-        $('#creditCardPopup').show();
-      });
-      $('.close1').click(function() {
-        $('#creditCardPopup').hide();
-      });
+     
     });
     
+      $('.close1').click(hideCreditCardPopup);
+    
+     
+      
+    });
+    $(document).ready(function() {
+      // Close the response form when the close button is clicked
+      $('.close-response').click(function() {
+        $('#responseForm').hide();
+        $('#creditCardOrderForm')[0].reset();
+        $('#creditCardPopup').hide();
+            
+          
+      });
+    });
 
 
 
