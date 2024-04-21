@@ -297,7 +297,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #ffffff;
+    background-color: #4cbda4;
     padding: 20px;
     border: 1px solid #cccccc;
     border-radius: 5px;
@@ -636,6 +636,35 @@
 }
 .dark-mode .form-control{
     color: #fff;
+}
+
+
+
+
+
+/* Default styling */
+#backnumber{
+    color: black;
+}
+#backnumber.valid {
+    color: green; 
+}
+
+#backnumber.invalid {
+    color: red; 
+}
+
+
+/* Default styling */
+.feedback {
+    color: black;
+}
+.feedback.valid {
+    color: green; 
+}
+
+.feedback.invalid {
+    color: red; 
 }
 
 

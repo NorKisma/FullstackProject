@@ -87,7 +87,49 @@
 
   
 
-   
+   // Select the input field and feedback element
+   $(document).ready(function() {
+    const name = $('#name');
+    const feedback = $('.feedback');
+
+    name.on('input', function() {
+        if (name.val() === '') {
+            feedback.text('Please enter FullName');
+            feedback.removeClass('valid invalid');
+        } else {
+            if (name.val().length >= 12) {
+                feedback.text('Valid input');
+                feedback.removeClass('invalid').addClass('valid');
+            } else {
+                feedback.text('Input too short');
+                feedback.removeClass('valid').addClass('invalid');
+            }
+        }
+    });
+});
+
+
+$(document).ready(function() {
+  const number = $('#number');
+  const feedback = $('#backnumber');
+
+  number.on('input', function() {
+      if (number.val() === '') {
+          feedback.text('Please enter number');
+          feedback.removeClass('valid invalid');
+      } else {
+          if (number.val().length >= 9) {
+              feedback.text('Valid input');
+              feedback.removeClass('invalid').addClass('valid');
+          } else {
+              feedback.text('Input too short');
+              feedback.removeClass('valid').addClass('invalid');
+          }
+      }
+  });
+});
+
+
       
 
 

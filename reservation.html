@@ -85,15 +85,14 @@
     </div>
     
     <div class="col-md-7 py-3 py-md-0">
-      <form action="#">
+      <form action="#" id="orderForm">
+        <!-- Your form fields here -->
         <div class="mb-4">
           <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
         </div>
-
         <div class="mb-4">
           <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
         </div>
-
         <div class="mb-4">
           <input type="number" class="form-control" id="number" placeholder="Enter Number" required>
         </div>
@@ -108,19 +107,32 @@
             <option value="6">6</option>
             <option value="7">7</option>
           </select>
-            </div> 
-            <div class="mb-4">
-              <input id="input_date" class="datepicker picker__input form-control" 
-              name="input-date" type="datetime-local"required data-error="Please select Date">
-            </div>
-        <div class="mb-5">   
-         <textarea  class="form-control" id="comment" rows="5" name="text" placeholder="Enter Address" required></textarea>
         </div>
-         <div class="mb-5">
-         <button type="submit" id="Reservation" class="order-btn">Order Now</button>
-         </div>
+        <div class="mb-4">
+          <input id="input_date" class="form-control" name="input-date" type="datetime-local" required data-error="Please select Date">
+        </div>
+        <div class="mb-5">
+          <textarea class="form-control" id="comment" rows="5" name="text" placeholder="Enter Address" required></textarea>
+        </div>
+        <div class="mb-5">
+          <button type="submit" id="Reservation" class="order-btn">Order Now</button>
+        </div>
       </form>
     </div>
+    
+
+    <div id="responseForm" class="response-form" style="display: none;">
+      <div class="response-content">
+      
+    </div>  <span class="close-response">&times;</span>
+        <h1>Thank You!</h1>
+        <p>Your order has been submitted successfully.</p>
+        <ul>
+          <li>other available products <a href="menu.html">here</a>.</li>
+        </ul>
+      </div>
+    
+
 
   </div>
 </section>
@@ -194,7 +206,7 @@
 </footer>
 <!-- footer -->
 
-
+<script src="javascript.js"></script>
     
 
 
