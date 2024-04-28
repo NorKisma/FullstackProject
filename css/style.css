@@ -44,12 +44,13 @@
     background: rgb(248, 26, 92);
     color: #ffffff;
 }
-#toggleOrderSection{
+
+#toggleOrderSection {
     margin-top: 10px;
     width: 100%;
     padding: 15px 0;
     background: transparent;
-    
+
     border: 2px solid #e53937;
     color: #e53937;
     border-radius: 10px;
@@ -63,6 +64,7 @@
     color: white;
     border: 2px solid white;
 }
+
 #btn0 {
     background: transparent;
     border: 2px solid #e53937;
@@ -133,7 +135,8 @@
     color: white;
 }
 
-@media screen and (max-width: 667px), (max-width: 1024px) {
+@media screen and (max-width: 667px),
+(max-width: 1024px) {
     .content h3 {
         margin: 130px 0 0 30px;
     }
@@ -333,34 +336,34 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .popup-content {
+}
+
+.popup-content {
     background-color: #fefefe;
     margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-  }
-  
-  .close {
+}
+
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
-  
+}
 
 
 
-  .popup-form1 {
+
+.popup-form1 {
     display: none;
     overflow: auto;
     position: fixed;
@@ -372,36 +375,18 @@
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-  }
-  
-  .popup-content1 {
+}
+
+.popup-content1 {
     text-align: center;
-  }
-  
-  .close1 {
+}
+
+.close1 {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
-  }
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
@@ -542,25 +527,39 @@
     background-color: transparent;
     cursor: pointer;
     border-radius: 50px;
-    font-size: 16px; /* Adjust size as needed */
-  }
-  
-  .arrow-button span {
-    margin-left: 10px; /* Adjust spacing between arrow and text */
-  }
-  .arrow-button:hover{
+    font-size: 16px;
+    /* Adjust size as needed */
+}
+
+.arrow-button span {
+    margin-left: 10px;
+    /* Adjust spacing between arrow and text */
+}
+
+.arrow-button:hover {
     background: rgb(228, 95, 134);
     color: #ffffff;
-   
+
 }
-  
+
 
 .dark-mode {
     background-color: #333;
     color: #fff;
 }
- 
-.dark-mode h1, h2, h3 {
+
+.dark-mode div {
+    background-color: #333;
+    color: #fff;
+}
+.dark-mode div nav{
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode h1,
+h2,
+h3 {
     color: #fff;
 }
 
@@ -570,15 +569,18 @@
 
 
 .dark-mode .top-navbar .navbar.container {
-    background-color: #555;
+    background-color: #333;
+    color: #fff;
 }
+
 .dark-mode .fixed-top {
-    background-color: #555;
+    background-color:#333;
     color: #fff;
 }
 
 .dark-mode .col-md-3 {
-    background-color: #555;
+    background-color: #333;
+    color: #fff;
 }
 
 .dark-mode .card-body {
@@ -589,52 +591,62 @@
 .dark-mode nav a {
     color: #f7f2f2;
 }
-.dark-mode  form-control { 
+
+.dark-mode form-control {
     background-color: #555;
     color: #f7f2f2;
 }
+
 .dark-mode section {
     background-color: #444;
     color: #f7f2f2;
 }
 
 .dark-mode footer {
-    background-color: #555;
+    background-color: #444;
+    color: #fff;
 }
 
 /* Navbar Dark Mode Styles */
 
 
 .dark-mode .Top-navbar {
-    background-color: #444; /* Dark background color */
-    
+    background-color: #444;
+    color: #fff;
+    /* Dark background color */
+
 }
 
 
 
 .dark-mode .navbar-collapse .nav-item.active .nav-link {
-    
+
     color: #fff;
 }
 
 
 .dark-mode .top-navbar .navbar-nav .nav-link {
-    color: #fff; /* Navbar link color */
+    color: #fff;
+    /* Navbar link color */
 }
 
 .dark-mode .top-navbar .navbar-nav .nav-link:hover {
-    color: #ccc; /* Navbar link color on hover */
+    color: #ccc;
+    /* Navbar link color on hover */
 }
 
 
 
 .dark-mode .top-navbar .navbar-collapse {
-    background-color: #333; /* Background color of the collapsed navbar */
+    background-color: #333;
+    /* Background color of the collapsed navbar */
 }
-.dark-mode .arrow-button{
+
+.dark-mode .arrow-button {
     color: #fff;
 }
-.dark-mode .form-control{
+
+.dark-mode .form-control {
     color: #fff;
 }
 
@@ -643,15 +655,16 @@
 
 
 /* Default styling */
-#backnumber{
+#backnumber {
     color: black;
 }
+
 #backnumber.valid {
-    color: green; 
+    color: green;
 }
 
 #backnumber.invalid {
-    color: red; 
+    color: red;
 }
 
 
@@ -659,15 +672,11 @@
 .feedback {
     color: black;
 }
+
 .feedback.valid {
-    color: green; 
+    color: green;
 }
 
 .feedback.invalid {
-    color: red; 
+    color: red;
 }
-
-
-
-
-
