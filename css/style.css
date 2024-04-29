@@ -629,3 +629,17 @@
 .feedback.invalid {
     color: red;
 }
+
+
+
+
+.content.collapsed {
+    max-height: 50px; 
+    overflow: hidden;
+    transition: max-height 0.3s ease; 
+}
+
+.content.expanded {
+    max-height: none;
+    transition: max-height 0.3s ease; 
+}

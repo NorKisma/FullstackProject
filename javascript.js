@@ -127,6 +127,21 @@ $(document).ready(function() {
 
 
       
+$(document).ready(function() {
+  $('#Read button').click(function() {
+      var $btn = $(this);
+      var $content = $btn.closest('.col-md-6').find('.content');
+      
+      $content.toggleClass('collapsed');
+      if ($content.hasClass('collapsed')) {
+          $btn.text('Read More...');
+      } else {
+          $btn.text('Read Less');
+      }
+  });
+});
+
+
 
 
 
