@@ -541,117 +541,66 @@
     color: #ffffff;
 
 }
-
-
-.dark-mode {
-    background-color: #333;
-    color: #fff;
-}
-
-.dark-mode div {
-    background-color: #333;
-    color: #fff;
-}
-.dark-mode div nav{
-    background-color: #333;
-    color: #fff;
-}
-
+/* General Dark Mode Styles */
+.dark-mode,
+.dark-mode div,
+.dark-mode div nav,
 .dark-mode h1,
-h2,
-h3 {
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode .top-navbar .navbar.container,
+.dark-mode .fixed-top,
+.dark-mode .col-md-3,
+.dark-mode .card-body,
+.dark-mode nav a,
+.dark-mode form-control,
+.dark-mode section,
+.dark-mode footer,
+.dark-mode .Top-navbar,
+.dark-mode .arrow-button,
+.dark-mode .form-control {
+    background-color: #504e4e;
     color: #fff;
 }
 
-.dark-mode p {
-    color: #fff;
-}
-
-
-.dark-mode .top-navbar .navbar.container {
-    background-color: #333;
-    color: #fff;
-}
-
-.dark-mode .fixed-top {
-    background-color:#333;
-    color: #fff;
-}
-
-.dark-mode .col-md-3 {
-    background-color: #333;
-    color: #fff;
-}
-
+/* Specific Dark Mode Styles */
 .dark-mode .card-body {
-    background-color: #555;
+    background-color: #504e4e;
     color: #f7f2f2;
 }
 
-.dark-mode nav a {
-    color: #f7f2f2;
-}
-
+.dark-mode nav a,
 .dark-mode form-control {
-    background-color: #555;
+    background-color: #504e4e;
     color: #f7f2f2;
 }
 
 .dark-mode section {
-    background-color: #444;
-    color: #f7f2f2;
+    background-color: #3a3939;
 }
 
 .dark-mode footer {
-    background-color: #444;
-    color: #fff;
+    background-color: #706e6e;
 }
-
-/* Navbar Dark Mode Styles */
-
 
 .dark-mode .Top-navbar {
-    background-color: #444;
-    color: #fff;
-    /* Dark background color */
-
-}
-
-
-
-.dark-mode .navbar-collapse .nav-item.active .nav-link {
-
+   
     color: #fff;
 }
 
-
+.dark-mode .navbar-collapse .nav-item.active .nav-link,
 .dark-mode .top-navbar .navbar-nav .nav-link {
     color: #fff;
-    /* Navbar link color */
 }
 
 .dark-mode .top-navbar .navbar-nav .nav-link:hover {
     color: #ccc;
-    /* Navbar link color on hover */
 }
-
-
 
 .dark-mode .top-navbar .navbar-collapse {
-    background-color: #333;
-    /* Background color of the collapsed navbar */
+    background-color: #504e4e;
 }
-
-.dark-mode .arrow-button {
-    color: #fff;
-}
-
-.dark-mode .form-control {
-    color: #fff;
-}
-
-
-
 
 
 /* Default styling */

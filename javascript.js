@@ -1,23 +1,19 @@
 
-
-    // Function to toggle dark mode
     function toggleDarkMode() {
-        const body = document.body;
-        body.classList.toggle("dark-mode");
-
+      const body = $("body");
+      body.toggleClass("dark-mode");
   
-        const isDarkMode = body.classList.contains("dark-mode");
-        localStorage.setItem("darkMode", isDarkMode);
-    }
-
-    const isDarkMode = localStorage.getItem("darkMode") === "true";
-    if (isDarkMode) {
-        document.body.classList.add("dark-mode");
-    }
-
-
-
-
+      const isDarkMode = body.hasClass("dark-mode");
+      localStorage.setItem("darkMode", isDarkMode);
+  }
+  
+  $(document).ready(function() {
+      const isDarkMode = localStorage.getItem("darkMode") === "true";
+      if (isDarkMode) {
+          $("body").addClass("dark-mode");
+      }
+  });
+  
     $(document).ready(function() {
         // Show the popup form when the button is clicked
         $('#toggleOrder').click(function() {
