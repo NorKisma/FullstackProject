@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+   <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Site Meats -->
+    <title>Som Coffee | Restaurant</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+  <body>
+      <!-- Start header -->
+      <header class="top-navbar">
+        <nav class="navbar navbar-expand-lg  navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" id="logo">
+                  <img src="./images/logo.png" alt="" width="30px"><span>               SomCoffee|Restaurant</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span> </button>
+
+                  <div class="collapse navbar-collapse" id="navbar-rs-food">
+                    <ul class="navbar-nav nav my-3 my-xl-0 px-4 flex-nowrap  ml-auto ">
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Pages</a>
+                          <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                              <a class="dropdown-item" href="reservation.html">Reservation</a>
+                              <a class="dropdown-item" href="stuff.html">Stuff</a>
+                              <a class="dropdown-item" href="gallery.html">Gallery</a>
+                       </div>
+                        </li>
+                       <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                       <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
+
+
+                        <div class="nav-item w-100">
+                        <form class="position-relative" method="GET" action="#">
+                        <input class="form-control pe-5 bg-transparent" type="search" placeholder="  Search Food " aria-label="Search" name="name">
+                        <button class="btn bg-transparent px-2 py-0 position-absolute top-50 end-0 translate-middle-y" type="submit"><i class="fas fa-search fs-6 "></i> </button>
+                        </form>
+                        </div>
+                        </div>
+
+                    </ul>
+                    <button id="darkModeToggle" onclick="toggleDarkMode()" class="arrow-button">
+                      <span>&#9660;</span> <!-- Unicode down arrow character -->
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+ 	<!--end navbar-->
+   <section class="home" id="home">
+    <div class="d-sm-flex align-items-center ">
+      <div class="content ">
+        <h3>Welcome To <span>Som Coffee & Restaurant</span></h3>
+      <p> Where we strive to provide  a memorable dining experience!
+
+            </p>
+        <a href="#"id="toggleOrder" class="btn">Order Now</a>
+        </div>
+
+      <!-- courser for the showcase -->
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/burger.png"   alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/chicken leg.png" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/review-img.png" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/fasr food.png"  alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+   </section>
+  </header>
+
+ <!-- Top Section Start -->
+
+<div class="top-section">
+  <h5>WHAT WE SERVE</h5>
+  <h3>Your Favorite Food <br> Delivery Partner</h3>
+  <div class="row">
+
+    <div class="col-md-4 py-3 py-md-0 dark-theme">
+      <div class="card" >
+        <img src="./images/img1.png" alt="">
+        <div class="card-body">
+        <h1>Easy To Order</h1> <p>You only need a few steps in <br> ordering food</p>
+      </div>  </div>   </div>
+      <!-- End Col one -->
+
+      <div class="col-md-4 py-3 py-md-0">
+      <div class="card ">
+
+        <img src="./images/img2.png" alt="">
+        <div class="card-body">
+        <h1>Fastest Delivery</h1><p>Delivery that is always On time <br> even faster</p>
+      </div> </div> </div>
+      <!-- End Col Two -->
+
+      <div class="col-md-4 py-3 py-md-0">
+      <div class="card  ">
+        <img src="./images/img3.png" alt="">
+        <div class="card-body">
+        <h1>Best Quality</h1><p>Not only fast for us quality is also <br> number one</p>
+      </div></div></div>
+      <!-- End Col three -->
+  </div>
+</div>
+<!-- Top Section End -->
+
+<div class="container">
+  <div class="line" style="width: 100%; height: 2px; background-color: #e53937;"></div>
+</div>
+<!-- Our Menu Start -->
+<section class="Dishes" id="Dishes">
+  <h1>Menu</h1>
+  <h2>Delicious Dishes Is Here</h2>
+  <div class="row" style="margin-top: 15px;">
+
+    <div class="col-md-3 py-3 py-md-0 my-1 ">
+      <div class="card card ">
+        <img src="./images/Baris and chicken.jpeg" alt="">
+        <div class="card-body">
+          <h3>Rice And chicken</h3>
+
+          <div class="rating">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+
+          <p>$6 <i class="fa-solid fa-credit-card"id="showCreditCardForm8"></i></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 py-3 py-md-0 my-1">
+      <div class="card">
+        <img src="./images/Jabaati and Suqaar.jpeg" alt="">
+        <div class="card-body">
+          <h3>Chapat and Suqaar</h3>
+
+          <div class="rating">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+
+          <p>$5.00 <i class="fa-solid fa-credit-card"id="showCreditCardForm7"></i></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 py-3 py-md-0 my-1">
+      <div class="card">
+        <img src="./images/Fresh Fish.jpeg" alt="">
+        <div class="card-body">
+          <h3>Fresh Fish</h3>
+
+          <div class="rating">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+
+          <p>$2.00 <i class="fa-solid fa-credit-card"id="showCreditCardForm6"></i></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 py-3 py-md-0 my-1">
+      <div class="card">
+        <img src="./images/Sanbus.jpeg" alt="">
+        <div class="card-body">
+          <h3> Best Sanbus</h3>
+
+          <div class="rating">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+
+          <p>$3.0<i class="fa-solid fa-credit-card"id="showCreditCardForm5"></i></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 py-3 py-md-0 my-1">
+      <div class="card">
+
+
+        <img src="./images/Shuwarmo1.jpeg" alt="">
+        <div class="card-body">
+          <h3>Shuwarmo</h3>
+          <div class="rating">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+             <p>$1.5 <i class="fa-solid fa-credit-card"id="showCreditCardForm4"></i></p>
+
+            </div>
+      </div>
+        <!-- Credit Card Order Form-->
+
+        <div id="creditCardPopup" class="popup-form1">
+          <div class="popup-content1">
+            <span class="close1">&times;</span>
+            <div class="heading">Order Your <span>Food | Coffee</span></div>
+            <!-- Credit Card Order Form -->
+            <form id="creditCardOrderForm" action="#">
+              <div class="mb-3">
+                <input type="text" class="form-control" id="cardholderName" placeholder="Cardholder Name" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="cardNumber" placeholder="Card Number" required>
+              </div>
+              <div class="mb-3">
+                <input type="date" class="form-control" id="expiryDate" placeholder="Expiry Date (MM/YY)" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="cvv" placeholder="CVV" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Order with Credit Card</button>
+            </form>
+            <!-- End Credit Card Order Form -->
+          </div>
+        </div>
+        <div id="responseForm" class="response-form" style="display: none;">
+          <div class="response-content">
+            <span class="close-response">&times;</span>
+            <h2>Thank You!</h2>
+            <p>Your order has been submitted successfully.</p>
+        
+            <ul>
+              <li>Track your order status <a href="#">here</a>.</li>
+              <li>View other available products <a href="menu.html">here</a>.</li>
+            </ul>
+          </div>
+        </div>
+
+<!-- End Credit Card Order Form -->
+    </div>
+
+
+    <div class="col-md-3 py-3 py-md-0 my-1">
+      <div class="card">
+        <img src="./images/Furot.jpeg" alt="">
+        <div class="card-body">
+          <h3>Best Furot</h3>
+
+          <div class="rating">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+
+          <p>$10 <i class="fa-solid fa-credit-card"id="showCreditCardForm3"></i></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 py-3 py-md-0 my-1">
+      <div class="card">
+        <img src="./images/Drinks.jpeg" alt="">
+        <div class="card-body">
+          <h3>Juice</h3>
+
+          <div class="rating">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+          <p>$1.50 <i class="fa-solid fa-credit-card"id="showCreditCardForm2"></i></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 py-3 py-md-0 my-1">
+      <div class="card">
+        <img src="./images/anjro.jpeg" alt="">
+        <div class="card-body">
+          <h3>Anjero And Beer</h3>
+          <div class="rating">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+          <p>$3.00 <i class="fa-solid fa-credit-card"id="showCreditCardForm1"></i></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+ <!-- menu section -->
+
+<!-- gallery -->
+<div class="container" id="gallery">
+  <h1 class="text-center">GALLERY</h1>
+  <div class="row">
+      <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+              <img src="./images/gallery-img-05.jpg" alt="">
+          </div>
+      </div>
+      <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+              <img src="./images/gallery-img-03.jpg" alt="">
+          </div>
+      </div>
+      <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+              <img src="./images/gallery-img-06.jpg" alt="">
+          </div>
+      </div>
+      <div class="col-md-4 py-3 py-md-0">
+         <div class="card">
+             <img src="./images/img-06.jpg" alt="">
+         </div>
+     </div>
+     <div class="col-md-4 py-3 py-md-0">
+         <div class="card">
+             <img src="./images/img-04.jpg" alt="">
+         </div>
+     </div>
+     <div class="col-md-4 py-3 py-md-0">
+         <div class="card">
+             <img src="./images/img-01.jpg" alt="">
+         </div>
+     </div>
+  </div>
+</div>
+<!-- gallery -->
+
+
+
+
+<!-- start popup-form -->
+
+
+<div id="orderDialog" class="popup-form">
+  <div class="popup-content">
+    <span class="close">&times;</span>
+    <div class="heading">Order Your <span>Food | Coffee</span></div>
+    <div class="row">
+      <div class="col-md-5 py-3 py-md-0">
+        <div class="card">
+          <img src="./images/img1.png" alt="">
+        </div>
+      </div>
+      <div class="col-md-7 py-3 py-md-0">
+        <form action="#" id="orderForm">
+          <!-- Your form fields here -->
+          <div class="mb-4">
+            
+            <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
+            <div class="feedback">   </div>
+          </div> 
+          <div class="mb-4">
+            <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+           
+          </div>
+          <div class="mb-4">
+            <input type="number" class="form-control" id="number" placeholder="Enter Number" required>
+               <div id="backnumber"></div>
+          </div>
+          <div class="mb-4">
+            <select class="custom-select d-block form-control" id="person" required data-error="Please select Person">
+              <option disabled selected>Select Person*</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+          </div>
+          <div class="mb-4">
+            <input id="input_date" class="form-control" name="input-date" type="datetime-local" required data-error="Please select Date">
+          </div>
+          <div class="mb-5">
+            <textarea class="form-control" id="comment" rows="5" name="text" placeholder="Enter Address" required></textarea>
+           
+                       
+
+          </div>
+          <div class="mb-5">
+            <button type="submit" id="Reservation" class="order-btn">Order Now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- end popup-form -->
+ <div id="responseForm" class="response-form" style="display: none;">
+  <div class="response-content">
+  
+</div>  <span class="close-response">&times;</span>
+    <h1>Thank You!</h1>
+    <p>Your order has been submitted successfully.</p>
+    <ul>
+      <li>other available products <a href="menu.html">here</a>.</li>
+    </ul>
+  </div>
+
+
+ <!-- end popup-form -->
+
+
+
+
+<!-- Contact Section Start -->
+<section class="contact" id="contact">
+  <div class="heading">
+    Contact <span>us</span>
+  </div>
+  <div class="row">
+    <div class="col-md-5 py-3 py-md-0">
+      <h3>Let's Get In Touch</h3>
+      <p>  </p>
+      <i class="fa-solid fa-phone"><span>+252 617 22 06 06</span></i><br><br>
+      <i class="fa-solid fa-envelope"><span>nor.jws@gmail.com</span></i><br><br>
+      <i class="fa-solid fa-location-dot"><span>Kismayo Somaila</span></i>
+    </div>
+
+    <div class="col-md-7 py-3 py-md-0">
+
+
+      <form id="contactForm">
+        <div class="mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
+        </div>
+        <div class="mb-3">
+            <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+        </div>
+        <div class="mb-3">
+            <input type="number" class="form-control" id="number" placeholder="Enter Number" required>
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control" id="comment" rows="5" name="text" placeholder="Enter Message" required></textarea>
+        </div>
+        
+        <button type="submit"id="Reservation" class="order-btn mb-5">Message</button>
+    </form>
+
+      
+    </div>
+  </div>
+
+</section>
+<!-- Contact Section End -->
+
+
+ <!-- footer -->
+ <footer id="footer" >
+  <div class="footer-top">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-md-6 footer-contact">
+                  <h4>Som Coffee <span>& Restaurant</span> </h4>
+                  <p>
+                      Nor <br><br>
+                      Kismayo <br><br>
+                      Somalia <br><br>
+                  </p>
+                  <strong>Phone: <strong>+252617220603</strong></strong>
+                  <strong>Email: <strong>Nor.jws@gmail.com</strong></strong>
+              </div>
+
+              <div class="col-lg-3 col-md-6 footer-links">
+                 <h4>Usefull Links</h4>
+                 <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                 </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 footer-links">
+                  <h4>Our Services</h4>
+                  <ul>
+
+                          <li><a href="#">Free wifi</a></li>
+                          <li><a href="#">friendly staff</a></li>
+                      <li><a href="#">Training Programs</a></li>
+
+                          <li><a href="#">Events </a></li>
+                      </ul>
+
+              </div>
+
+              <div class="col-lg-3 col-md-6 footer-links">
+                  <h4>Our Social Network</h4>
+                 <br/>
+                  <div class="social-icons">
+                      <i class="fa-brands fa-twitter"></i>
+                      <i class="fa-brands fa-instagram"></i>
+                      <i class="fa-brands fa-facebook-f"></i>
+                      <i class="fa-brands fa-youtube"></i>
+                      <i class="fa-brands fa-linkedin"></i>
+
+                    </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="container py-4">
+      <div class="copyright">
+          &copy; Copyright <strong><span>Som Coffee & Restaurant</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+          Designed By <a href="https://norkisma.github.io/FullstackProject/index.html">FahanTech</a>
+      </div>
+  </div>
+</footer>
+<!-- footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="send_email.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>
