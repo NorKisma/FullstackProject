@@ -103,6 +103,31 @@
         }
     });
 });
+// Remove any non-numeric characters
+$(document).ready(function() {
+  $('#cardNumber').on('input', function() {
+      var cardNumber = $(this).val();
+      
+      cardNumber = cardNumber.replace(/\D/g,'');
+      $(this).val(cardNumber);
+  });
+});
+
+
+$(document).ready(function() {
+  $('#cvv').on('input', function() {
+      var cvv = $(this).val();
+      
+      cvv = cvv.replace(/\D/g,'');
+      // Limit input to 4 digits
+      if (cvv.length > 4) {
+          cvv = cvv.slice(0, 4);
+      }
+      $(this).val(cvv);
+  });
+});
+
+
 
 
 $(document).ready(function() {
@@ -142,6 +167,23 @@ $(document).ready(function() {
 });
 
 
+// send email$(document).ready(function() {
+    $('#contactForm').submit(function(e) {
+      e.preventDefault(); // Prevent form submission
+      var formData = $(this).serialize(); // Serialize form data
+      $.ajax({
+          type: 'POST',
+          url: 'end_email.php', // Path to your PHP script
+          data: formData,
+          success: function(response) {
+              alert(response); // Show success message
+          },
+          error: function(xhr, status, error) {
+              console.error(xhr.responseText); // Log error message
+              alert('An error occurred while sending your message. Please try again later.');
+          }
+      });
+  });
 
 
 

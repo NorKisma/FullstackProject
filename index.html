@@ -271,7 +271,7 @@
             <span class="close-response">&times;</span>
             <h2>Thank You!</h2>
             <p>Your order has been submitted successfully.</p>
-            <p>Additional Response Content:</p>
+        
             <ul>
               <li>Track your order status <a href="#">here</a>.</li>
               <li>View other available products <a href="menu.html">here</a>.</li>
@@ -473,24 +473,26 @@
     </div>
 
     <div class="col-md-7 py-3 py-md-0">
-      <form action="#">
-        <div class="mb-3">
-          <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
-        </div>
 
-        <div class="mb-3">
-          <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
-        </div>
 
+      <form id="contactForm">
         <div class="mb-3">
-          <input type="number" class="form-control" id="number" placeholder="Enter Number" required>
+            <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
         </div>
+        <div class="mb-3">
+            <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+        </div>
+        <div class="mb-3">
+            <input type="number" class="form-control" id="number" placeholder="Enter Number" required>
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control" id="comment" rows="5" name="text" placeholder="Enter Message" required></textarea>
+        </div>
+        
+        <button type="submit"id="Reservation" class="order-btn mb-5">Message</button>
+    </form>
 
-        <div class="mb-3">
-         <textarea  class="form-control" id="comment" rows="5" name="text" placeholder="Enter Message" required></textarea>
-        </div>
-         <button type="submit"id="Reservation" class="order-btn mb-5">Message</button>
-      </form>
+      
     </div>
   </div>
 
