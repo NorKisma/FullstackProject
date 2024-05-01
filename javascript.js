@@ -167,25 +167,26 @@ $(document).ready(function() {
 });
 
 
-// send email$(document).ready(function() {
+// send email
+$(document).ready(function() {
     $('#contactForm').submit(function(e) {
-      e.preventDefault(); // Prevent form submission
-      var formData = $(this).serialize(); // Serialize form data
+      e.preventDefault(); 
+      var formData = $(this).serialize(); 
       $.ajax({
           type: 'POST',
-          url: 'end_email.php', // Path to your PHP script
+          url: 'send_email.php', 
           data: formData,
           success: function(response) {
-              alert(response); // Show success message
+              alert(response); 
           },
           error: function(xhr, status, error) {
-              console.error(xhr.responseText); // Log error message
+              console.error(xhr.responseText); 
               alert('An error occurred while sending your message. Please try again later.');
           }
       });
   });
 
-
+});
 
 
 
