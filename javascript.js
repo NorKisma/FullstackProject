@@ -64,10 +64,12 @@
     });
     
       $('.close1').click(hideCreditCardPopup);
-    
-     
+  
       
     });
+
+
+
     $(document).ready(function() {
       // Close the response form when the close button is clicked
       $('.close-response').click(function() {
@@ -103,6 +105,8 @@
         }
     });
 });
+
+
 // Remove any non-numeric characters
 $(document).ready(function() {
   $('#cardNumber').on('input', function() {
@@ -184,12 +188,6 @@ $(document).ready(function() {
           }
       });
   });
-
-
-
-
-
-
 
 
 
