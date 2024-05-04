@@ -57,6 +57,14 @@
                       <span>&#9660;</span> <!-- Unicode down arrow character -->
                     </button>
                 </div>
+
+
+                <div class="shopping">
+                  <img src="shopping.svg" alt="">
+                  <span class="quantity">0</span>
+                  </div>
+
+
             </div>
         </nav>
        </header>
@@ -70,202 +78,203 @@
 
     <!-- Menu Items -->
    
-      <section class="Dishes" id="Dishes">
-        <h1>Menu</h1>
-        <h2>Delicious Dishes Is Here</h2>
-        <div class="row" style="margin-top: 15px;">
-          <div class="col-md-3 py-3 py-md-0 my-1">
-            <div class="card card">
-              <img src="./images/Baris and chicken.jpeg" alt="">
-              <div class="card-body">
-                <h3>Rice And chicken</h3>
-                <div class="rating">
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                </div>
-                <p>$6 <i class="fa-solid fa-credit-card"id="showCreditCardForm8"></i></p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Continue with your existing menu items -->
-          <div class="col-md-3 py-3 py-md-0 my-1">
-            <div class="card">
-              <img src="./images/Jabaati and Suqaar.jpeg" alt="">
-              <div class="card-body">
-                <h3>Chapat and Suqaar</h3>
-                
-                <div class="rating">
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                </div>
-      
-                <p>$5.00 <i class="fa-solid fa-credit-card"id="showCreditCardForm7"></i></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 py-3 py-md-0 my-1">
-            <div class="card">
-              <img src="./images/Fresh Fish.jpeg" alt="">
-              <div class="card-body">
-                <h3>Fresh Fish</h3>
-               
-                <div class="rating">
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                </div>
-      
-                <p>$2.00 <i class="fa-solid fa-credit-card"id="showCreditCardForm6"></i></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 py-3 py-md-0 my-1">
-            <div class="card">
-              <img src="./images/Sanbus.jpeg" alt="">
-              <div class="card-body">
-                <h3> Best Sanbus</h3>
-               
-                <div class="rating">
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                </div>
-      
-                <p>$3.0<i class="fa-solid fa-credit-card"id="showCreditCardForm5"></i></p>
-              </div>
-            </div>
-          </div>
-       
-          <div class="col-md-3 py-3 py-md-0 my-1">
-            <div class="card">
-             
-               
-              <img src="./images/Shuwarmo1.jpeg" alt="">
-              <div class="card-body">
-                <h3>Shuwarmo</h3>
-                <div class="rating">
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                </div>
-                   <p>$1.5 <i class="fa-solid fa-credit-card"id="showCreditCardForm4"></i></p>
-                  
-                  </div>
-            </div>
-              <!-- Credit Card Order Form-->
-      
-              <div id="creditCardPopup" class="popup-form1">
-                <div class="popup-content1">
-                  <span class="close1">&times;</span>
-                  <div class="heading">Order Your <span>Food | Coffee</span></div>
-                  <!-- Credit Card Order Form -->
-                  <form id="creditCardOrderForm" action="#">
-                    <div class="mb-3">
-                      <input type="text" class="form-control" id="cardholderName" placeholder="Cardholder Name" required>
-                    </div>
-                    <div class="mb-3">
-                      <input type="text" class="form-control" id="cardNumber" placeholder="Card Number" required>
-                    </div>
-                    <div class="mb-3">
-                      <input type="date" class="form-control" id="expiryDate" placeholder="Expiry Date (MM/YY)" required>
-                    </div>
-                    <div class="mb-3">
-                      <input type="text" class="form-control" id="cvv" placeholder="CVV" required>
-                    </div>
-                    <div class="mb-3">
-                      <input type="number" class="form-control" id="quantity" placeholder="Quantity" min="1" value="1" required>
-                    </div>
-                 
-                    <button type="button" class="btn btn-primary" id="addToCartBtn">Add to Cart</button>
-                  </form>
-                  <!-- End Credit Card Order Form -->
-                </div>
-              </div>
-              <div id="responseForm" class="response-form" style="display: none;">
-                <div class="response-content">
-                
-              </div>  <span class="close-response">&times;</span>
-                  <h1>Thank You!</h1>
-                  <p>Your order has been submitted successfully.</p>
-                  <ul>
-                    <li>other available products <a href="menu.html">here</a>.</li>
-                  </ul>
-                </div>
-      <!-- End Credit Card Order Form -->
-          </div>
-      
-          <div class="col-md-3 py-3 py-md-0 my-1">
-            <div class="card">
-              <img src="./images/Furot.jpeg" alt="">
-              <div class="card-body">
-                <h3>Best Furot</h3>
-                
-                <div class="rating">
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                </div>
-      
-                <p>$10 <i class="fa-solid fa-credit-card"id="showCreditCardForm3"></i></p>
-              </div>
-            </div>
-          </div>
-      
-          <div class="col-md-3 py-3 py-md-0 my-1">
-            <div class="card">
-              <img src="./images/Drinks.jpeg" alt="">
-              <div class="card-body">
-                <h3>Juice</h3>
-             
-                <div class="rating">
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                </div>
-                <p>$1.50 <i class="fa-solid fa-credit-card"id="showCreditCardForm2"></i></p>
-              </div>
-            </div>
-          </div>
-      
-          <div class="col-md-3 py-3 py-md-0 my-1">
-            <div class="card">
-              <img src="./images/anjro.jpeg" alt="">
-              <div class="card-body">
-                <h3>Anjero And Beer</h3>
-                <div class="rating">
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                  <i class="fa-solid fa-star checked"></i>
-                </div>
-                <p>$3.00 <i class="fa-solid fa-credit-card"id="showCreditCardForm1"></i></p>
-              </div>
-            </div>
-          </div>
-
-
-
-        </div>
-      </section>
+    <section class="Dishes" id="Dishes">
+      <h1>Menu</h1>
+      <h2>Delicious Dishes Is Here</h2>
+      <div class="row" style="margin-top: 15px;">
     
+        <div class="col-md-3 py-3 py-md-0 my-1 ">
+          <div class="card card ">
+            <img src="./images/Baris and chicken.jpeg" alt="">
+            <div class="card-body">
+              <h3>Rice And chicken</h3>
+            
+              <div class="rating">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <p>$6 <i class="fa-solid fa-credit-card" onclick="addToCart()"></i> </p>
+    
+           
+              
+    
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-3 py-3 py-md-0 my-1">
+          <div class="card">
+            <img src="./images/Jabaati and Suqaar.jpeg" alt="">
+            <div class="card-body">
+              <h3>Chapat and Suqaar</h3>
+              
+              <div class="rating">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+    
+              <p>$9 <i class="fa-solid fa-credit-card" onclick="addToCart()"></i> </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0 my-1">
+          <div class="card">
+            <img src="./images/Fresh Fish.jpeg" alt="">
+            <div class="card-body">
+              <h3>Fresh Fish</h3>
+             
+              <div class="rating">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+    
+              <p>$4 <i class="fa-solid fa-credit-card" onclick="addToCart()"></i> </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0 my-1">
+          <div class="card">
+            <img src="./images/Sanbus.jpeg" alt="">
+            <div class="card-body">
+              <h3> Best Sanbus</h3>
+             
+              <div class="rating">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <p>$7 <i class="fa-solid fa-credit-card" onclick="addToCart()"></i> </p>
+            </div>
+          </div>
+        </div>
+     
+        <div class="col-md-3 py-3 py-md-0 my-1">
+          <div class="card">
+           
+             
+            <img src="./images/Shuwarmo1.jpeg" alt="">
+            <div class="card-body">
+              <h3>Shuwarmo</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <p>$12 <i class="fa-solid fa-credit-card" onclick="addToCart()"></i> </p>
+                
+                </div>
+          </div>
+            <!-- Credit Card Order Form-->
+    
+            <div id="creditCardPopup" class="popup-form1">
+              <div class="popup-content1">
+                <span class="close1">&times;</span>
+                <div class="heading">Order Your <span>Food | Coffee</span></div>
+                <!-- Credit Card Order Form -->
+                <form id="creditCardOrderForm" action="#">
+                  <div class="mb-3">
+                    <input type="text" class="form-control" id="cardholderName" placeholder="Cardholder Name" required>
+                  </div>
+                  <div class="mb-3">
+                    <input type="text" class="form-control" id="cardNumber" placeholder="Card Number" required>
+                  </div>
+                  <div class="mb-3">
+                    <input type="date" class="form-control" id="expiryDate" placeholder="Expiry Date (MM/YY)" required>
+                  </div>
+                  <div class="mb-3">
+                    <input type="text" class="form-control" id="cvv" placeholder="CVV" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Order with Credit Card</button>
+                </form>
+                <!-- End Credit Card Order Form -->
+              </div>
+            </div>
+            <!--divid="responseForm" class="response-form" style="display: none;">
+              <div class="response-content">
+              
+            </div>  <span class="close-response">&times;</span>
+                <h1>Thank You!</h1>
+                <p>Your order has been submitted successfully.</p>
+                <ul>
+                  <li>other available products <a href="menu.html">here</a>.</li>
+                </ul>
+              </divid-->
+              
+     <!--    
+            
+    End Credit Card Order Form -->
+        </div>
+        
+    
+        <div class="col-md-3 py-3 py-md-0 my-1">
+          <div class="card">
+            <img src="./images/Furot.jpeg" alt="">
+            <div class="card-body">
+              <h3>Best Furot</h3>
+              
+              <div class="rating">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <p>$4.5 <i class="fa-solid fa-credit-card" onclick="addToCart()"></i> </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-3 py-3 py-md-0 my-1">
+          <div class="card">
+            <img src="./images/Drinks.jpeg" alt="">
+            <div class="card-body">
+              <h3>Juice</h3>
+           
+              <div class="rating">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <p>$2.5 <i class="" onclick="addToCart()">Add To Card</i> </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-3 py-3 py-md-0 my-1">
+          <div class="card">
+            <img src="./images/anjro.jpeg" alt="">
+            <div class="card-body">
+              <h3>Anjero And Beer</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <p>$6.5 <i class="fa-solid fa-credit-card" onclick="addToCart()"></i> </p>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+     <!-- menu section -->
 
 
  <!-- footer -->

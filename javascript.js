@@ -192,7 +192,14 @@ $(document).ready(function() {
 
 });
 
+function addToCart() {
+  var currentQuantity = parseInt($('.quantity').text());
+  $('.quantity').text(currentQuantity + 1);
+  
+  // Add the 'shopping' class to the counter
+  $('.quantity').addClass('shopping');
 
+}
 
 
 

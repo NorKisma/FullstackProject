@@ -59,6 +59,40 @@
     cursor: pointer;
 }
 
+.shopping{
+    position: relative;
+    text-align: right;
+}
+ .shopping img{
+    width: 40px;
+}
+.shopping span{
+    background: rgb(2, 207, 54);
+    border-radius: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: -5px;
+    left: 60%;
+    padding: 3px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #toggleOrderSection:hover {
     background: #e53937;
     color: white;
