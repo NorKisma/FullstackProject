@@ -736,3 +736,59 @@
 
 
 
+.listCard {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .cartItem {
+    display: flex;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  .itemImage {
+    width: 80px;
+    margin-right: 10px;
+  }
+  
+  .itemImage img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .itemDetails h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f3efef;
+  }
+  
+  .itemDetails p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #f3efef;
+  }
+  
+  .checkOut {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .total {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+  
+  .closeShopping {
+    cursor: pointer;
+    color: #fff;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+
+
