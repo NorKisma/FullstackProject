@@ -67,8 +67,8 @@
     width: 40px;
 }
 .shopping span{
-    background: rgb(2, 207, 54);
-    border-radius: 70%;
+    background: rgb(214, 45, 236);
+    border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +76,7 @@
     position: absolute;
     top: -5px;
     left: 60%;
-    padding: 3px 10px;
+    padding: 3px 10px;
 }
 
 
