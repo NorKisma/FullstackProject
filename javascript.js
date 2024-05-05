@@ -171,37 +171,34 @@ $(document).ready(function() {
 });
 
 
-// send email
-$(document).ready(function() {
-    $('#contactForm').submit(function(e) {
-      e.preventDefault(); 
-      var formData = $(this).serialize(); 
-      $.ajax({
-          type: 'POST',
-          url: 'send_email.php', 
-          data: formData,
-          success: function(response) {
-              alert(response); 
-          },
-          error: function(xhr, status, error) {
-              console.error(xhr.responseText); 
-              alert('An error occurred while sending your message. Please try again later.');
-          }
-      });
-  });
-
-});
-
 function addToCart() {
-  var currentQuantity = parseInt($('.quantity').text());
+  let currentQuantity = parseInt($('.quantity').text());
   $('.quantity').text(currentQuantity + 1);
   
-  // Add the 'shopping' class to the counter
   $('.quantity').addClass('shopping');
 
 }
+$(document).ready(function() {
+  // Selectors
+  let openShopping = $('.shopping');
+  let closeShopping = $('.closeShopping');
+  
+ 
+  let body = $('body');
+ 
+  function openCart() {
+      body.addClass('active');
+  }
 
+  function closeCart() {
+      body.removeClass('active');
+  }
 
+  openShopping.on('click', openCart);
+  closeShopping.on('click', closeCart);
+
+ 
+});
 
 
 
