@@ -176,19 +176,18 @@ $(document).ready(function() {
 
 //kkkk
 
-
+/*
 $(document).ready(function() {
-  // Selectors
+
   let openShopping = $('.shopping');
   let closeShopping = $('.closeShopping');
   let body = $('body');
 
-  // Function to open the shopping cart
+ 
   function openCart() {
       body.addClass('active');
   }
 
-  // Function to close the shopping cart
   function closeCart() {
       body.removeClass('active');
   }
@@ -230,6 +229,129 @@ $(document).ready(function() {
           </li>
       `);
   }
+
+  $(document).on('click', '.decrease', function() {
+    let $itemDetails = $(this).closest('.itemDetails');
+    let $quantityItem = $itemDetails.find('.quantityItem');
+    let currentQuantity = parseInt($quantityItem.text());
+    if (currentQuantity > 1) {
+        $quantityItem.text(currentQuantity - 1);
+        let $cartItem = $(this).closest('.cartItem');
+        let itemPrice = parseFloat($cartItem.find('p').text().substring(1));
+        let totalPrice = parseFloat($('.total').text().substring(1));
+        totalPrice -= itemPrice;
+        $('.total').text('$' + totalPrice.toFixed(1));
+    }
+});
+
+$(document).on('click', '.increase', function() {
+    let $itemDetails = $(this).closest('.itemDetails');
+    let $quantityItem = $itemDetails.find('.quantityItem');
+    let currentQuantity = parseInt($quantityItem.text());
+    $quantityItem.text(currentQuantity + 1);
+    let $cartItem = $(this).closest('.cartItem');
+    let itemPrice = parseFloat($cartItem.find('p').text().substring(1));
+    let totalPrice = parseFloat($('.total').text().substring(1));
+    totalPrice += itemPrice;
+    $('.total').text('$' + totalPrice.toFixed(1));
+});
+
+
+});
+*/
+
+
+
+$(document).ready(function() {
+  let openShopping = $('.shopping');
+  let closeShopping = $('.closeShopping');
+  let body = $('body');
+
+  function openCart() {
+    body.addClass('active');
+  }
+
+  function closeCart() {
+    body.removeClass('active');
+  }
+
+  openShopping.on('click', openCart);
+  closeShopping.on('click', closeCart);
+
+  $('.fa-credit-card').on('click', function() {
+    let $card = $(this).closest('.card');
+    let itemName = $card.find('h3').text();
+    let itemPrice = parseFloat($card.find('p').text().substring(1));
+    let itemImage = $card.find('img').attr('src');
+    addToCart(itemName, itemPrice, itemImage);
+  });
+
+  function addToCart(itemName, itemPrice, itemImage) {
+    let $existingItem = $('.listCard').find(`.itemDetails h4:contains('${itemName}')`);
+    if ($existingItem.length > 0) {
+      alert(`"${itemName}" is already in the cart.`);
+      return; 
+    }
+
+    let currentQuantity = parseInt($('.quantity').text());
+    $('.quantity').text(currentQuantity + 1);
+    let totalPrice = parseFloat($('.total').text().substring(1));
+    totalPrice += itemPrice;
+    $('.total').text('$' + totalPrice.toFixed(2)); // Adjusted to fixed(2) for two decimal places
+
+    $('.listCard').append(`
+      <li class="cartItem">
+        <div class="itemImage">
+          <img src="${itemImage}" alt="${itemName}">
+        </div>
+        <div class="itemDetails">
+          <h4>${itemName}</h4>
+          <p>$${itemPrice.toFixed(2)}</p> <!-- Adjusted to fixed(2) for two decimal places -->
+          <button class="decrease">-</button>
+          <span class="quantityItem">1</span>
+          <button class="increase">+</button>
+        </div>
+      </li>
+    `);
+  }
+
+  $(document).on('click', '.decrease', function() {
+    let $itemDetails = $(this).closest('.itemDetails');
+    let $quantityItem = $itemDetails.find('.quantityItem');
+    let currentQuantity = parseInt($quantityItem.text());
+    if (currentQuantity > 1) {
+      $quantityItem.text(currentQuantity - 1);
+      let $cartItem = $(this).closest('.cartItem');
+      let itemPrice = parseFloat($cartItem.find('p').text().substring(1));
+      let totalPrice = parseFloat($('.total').text().substring(1));
+      totalPrice -= itemPrice;
+      $('.total').text('$' + totalPrice.toFixed(2)); 
+    } else {
+      // If quantity is going to be 0, remove the entire cart item
+      let $cartItem = $(this).closest('.cartItem');
+      let itemPrice = parseFloat($cartItem.find('p').text().substring(1));
+      let totalPrice = parseFloat($('.total').text().substring(1));
+      totalPrice -= itemPrice;
+      $('.total').text('$' + totalPrice.toFixed(2)); 
+      $cartItem.remove();
+       // Decrease cart count
+       let currentQuantity = parseInt($('.quantity').text());
+       $('.quantity').text(currentQuantity - 1);
+    }
+  });
+
+  $(document).on('click', '.increase', function() {
+    let $itemDetails = $(this).closest('.itemDetails');
+    let $quantityItem = $itemDetails.find('.quantityItem');
+    let currentQuantity = parseInt($quantityItem.text());
+    $quantityItem.text(currentQuantity + 1);
+    let $cartItem = $(this).closest('.cartItem');
+    let itemPrice = parseFloat($cartItem.find('p').text().substring(1));
+    let totalPrice = parseFloat($('.total').text().substring(1));
+    totalPrice += itemPrice;
+    $('.total').text('$' + totalPrice.toFixed(2)); 
+    updateSummaryPrice();
+  });
 
 });
 
