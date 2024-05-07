@@ -175,91 +175,15 @@ $(document).ready(function() {
 
 
 //kkkk
-
-/*
-$(document).ready(function() {
-
-  let openShopping = $('.shopping');
-  let closeShopping = $('.closeShopping');
-  let body = $('body');
-
- 
-  function openCart() {
-      body.addClass('active');
-  }
-
-  function closeCart() {
-      body.removeClass('active');
-  }
-
-  openShopping.on('click', openCart);
-  closeShopping.on('click', closeCart);
-
-  $('.fa-credit-card').on('click', function() {
-      let $card = $(this).closest('.card');
-      let itemName = $card.find('h3').text();
-      let itemPrice = parseFloat($card.find('p').text().substring(1));
-      let itemImage = $card.find('img').attr('src');
-
-      addToCart(itemName, itemPrice, itemImage);
+function updateTotal() {
+  let total = 0;
+  $('.cartItem').each(function() {
+    let itemPrice = parseFloat($(this).find('.itemDetails p').text().substring(1));
+    let quantity = parseInt($(this).find('.quantityItem').text());
+    total += itemPrice * quantity;
   });
-
-  function addToCart(itemName, itemPrice, itemImage) {
-      let $existingItem = $('.listCard').find(`.itemDetails h4:contains('${itemName}')`);
-      if ($existingItem.length > 0) {
-          alert(`"${itemName}" is already in the cart.`);
-          return; 
-      }
-
-      let currentQuantity = parseInt($('.quantity').text());
-      $('.quantity').text(currentQuantity + 1);
-      let totalPrice = parseFloat($('.total').text().substring(1));
-      totalPrice += itemPrice;
-      $('.total').text('$' + totalPrice.toFixed(1));
-      
-      $('.listCard').append(`
-          <li class="cartItem">
-              <div class="itemImage">
-                  <img src="${itemImage}" alt="${itemName}">
-              </div>
-              <div class="itemDetails">
-                  <h4>${itemName}</h4>
-                  <p>$${itemPrice.toFixed(1)}</p>
-              </div>
-          </li>
-      `);
-  }
-
-  $(document).on('click', '.decrease', function() {
-    let $itemDetails = $(this).closest('.itemDetails');
-    let $quantityItem = $itemDetails.find('.quantityItem');
-    let currentQuantity = parseInt($quantityItem.text());
-    if (currentQuantity > 1) {
-        $quantityItem.text(currentQuantity - 1);
-        let $cartItem = $(this).closest('.cartItem');
-        let itemPrice = parseFloat($cartItem.find('p').text().substring(1));
-        let totalPrice = parseFloat($('.total').text().substring(1));
-        totalPrice -= itemPrice;
-        $('.total').text('$' + totalPrice.toFixed(1));
-    }
-});
-
-$(document).on('click', '.increase', function() {
-    let $itemDetails = $(this).closest('.itemDetails');
-    let $quantityItem = $itemDetails.find('.quantityItem');
-    let currentQuantity = parseInt($quantityItem.text());
-    $quantityItem.text(currentQuantity + 1);
-    let $cartItem = $(this).closest('.cartItem');
-    let itemPrice = parseFloat($cartItem.find('p').text().substring(1));
-    let totalPrice = parseFloat($('.total').text().substring(1));
-    totalPrice += itemPrice;
-    $('.total').text('$' + totalPrice.toFixed(1));
-});
-
-
-});
-*/
-
+  $('.total').text('$' + total.toFixed(2)); // Update total in the cart
+}
 
 
 $(document).ready(function() {
@@ -297,8 +221,8 @@ $(document).ready(function() {
     $('.quantity').text(currentQuantity + 1);
     let totalPrice = parseFloat($('.total').text().substring(1));
     totalPrice += itemPrice;
-    $('.total').text('$' + totalPrice.toFixed(2)); // Adjusted to fixed(2) for two decimal places
-
+    $('.total').text('$' + totalPrice.toFixed(0)); 
+    
     $('.listCard').append(`
       <li class="cartItem">
         <div class="itemImage">
@@ -306,7 +230,7 @@ $(document).ready(function() {
         </div>
         <div class="itemDetails">
           <h4>${itemName}</h4>
-          <p>$${itemPrice.toFixed(2)}</p> <!-- Adjusted to fixed(2) for two decimal places -->
+          <p>$${itemPrice.toFixed(2)}</p> 
           <button class="decrease">-</button>
           <span class="quantityItem">1</span>
           <button class="increase">+</button>
@@ -314,31 +238,35 @@ $(document).ready(function() {
       </li>
     `);
   }
-
   $(document).on('click', '.decrease', function() {
     let $itemDetails = $(this).closest('.itemDetails');
     let $quantityItem = $itemDetails.find('.quantityItem');
     let currentQuantity = parseInt($quantityItem.text());
     if (currentQuantity > 1) {
-      $quantityItem.text(currentQuantity - 1);
-      let $cartItem = $(this).closest('.cartItem');
-      let itemPrice = parseFloat($cartItem.find('p').text().substring(1));
-      let totalPrice = parseFloat($('.total').text().substring(1));
-      totalPrice -= itemPrice;
-      $('.total').text('$' + totalPrice.toFixed(2)); 
+        $quantityItem.text(currentQuantity - 1);
+        let $cartItem = $(this).closest('.cartItem');
+        let itemPrice = parseFloat($cartItem.find('p').text().substring(1));
+        let totalPrice = parseFloat($('.total').text().substring(1));
+        totalPrice -= itemPrice;
+        
+
     } else {
-      // If quantity is going to be 0, remove the entire cart item
-      let $cartItem = $(this).closest('.cartItem');
-      let itemPrice = parseFloat($cartItem.find('p').text().substring(1));
-      let totalPrice = parseFloat($('.total').text().substring(1));
-      totalPrice -= itemPrice;
-      $('.total').text('$' + totalPrice.toFixed(2)); 
-      $cartItem.remove();
-       // Decrease cart count
-       let currentQuantity = parseInt($('.quantity').text());
-       $('.quantity').text(currentQuantity - 1);
+        // If quantity is going to be 0, remove the entire cart item
+        let $cartItem = $(this).closest('.cartItem');
+        let itemPrice = parseFloat($cartItem.find('p').text().substring(1));
+        let totalPrice = parseFloat($('.total').text().substring(1));
+        totalPrice -= itemPrice;
+        $('.total').text('$' - totalPrice.toFixed(2));
+        $cartItem.remove();  
+        
+        // Decrease cart count
+        let currentQuantity = parseInt($('.quantity').text());
+        $('.quantity').text(currentQuantity - 1);
+        
+        updateTotal();
     }
-  });
+});
+
 
   $(document).on('click', '.increase', function() {
     let $itemDetails = $(this).closest('.itemDetails');
@@ -349,9 +277,11 @@ $(document).ready(function() {
     let itemPrice = parseFloat($cartItem.find('p').text().substring(1));
     let totalPrice = parseFloat($('.total').text().substring(1));
     totalPrice += itemPrice;
-    $('.total').text('$' + totalPrice.toFixed(2)); 
-    updateSummaryPrice();
+    $('.total').text('$' + totalPrice.toFixed(0)); 
+   let $itemPriceElement = $cartItem.find('p');
+  $itemPriceElement.text('$' + (itemPrice * (currentQuantity + 1)).toFixed(0)); 
+  updateSummaryPrice();
   });
-
+  updateTotal();
 });
 

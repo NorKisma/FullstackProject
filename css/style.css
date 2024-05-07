@@ -785,12 +785,20 @@
     margin-left: 40px;
     color: #fff;
 }
+ p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 20px;
+    color: #e747c4;
+}
 
 .total {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    margin-top: 20px; /* Add margin top for spacing */
-}
+    color: #f8f3f3;
+    margin-top: 20px;
+  }
+  
 
 
 
