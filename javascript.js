@@ -248,6 +248,7 @@ $(document).ready(function() {
         let itemPrice = parseFloat($cartItem.find('p').text().substring(1));
         let totalPrice = parseFloat($('.total').text().substring(1));
         totalPrice -= itemPrice;
+        $('.total').text('$' + totalPrice.toFixed(0));
         
 
     } else {
@@ -285,3 +286,16 @@ $(document).ready(function() {
   updateTotal();
 });
 
+function submitCart() {
+  // Clear the cart
+  $('.listCard').empty();
+  
+  // Reset total and quantity
+  $('.total').text('$0.00');
+  $('.quantity').text('0');
+
+  // Display success message
+  alert('Cart submitted successfully!');
+}
+
+$('.submitCartButton').on('click', submitCart);
