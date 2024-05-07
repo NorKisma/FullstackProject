@@ -276,7 +276,7 @@
           <div class="checkOut">
               
               <p>Total:<span class="total"> $0.00</span></p>
-              <div class="closeShopping">Close</div>
+              <div class="closeShopping">Close </div>
               <button class="submitCartButton">Submit Cart</button>
           </div>
       </div>
@@ -284,6 +284,47 @@
       
       
   
+      <div id="creditCardPopup" class="popup-form1">
+        <div class="popup-content1">
+          <span class="close1">&times;</span>
+          <div class="heading">Order Your <span>Food | Coffee</span></div>
+          <!-- Credit Card Order Form -->
+          <form id="creditCardOrderForm" action="#">
+            <div class="mb-3">
+              <input type="text" class="form-control" id="cardholderName" placeholder="Cardholder Name" required>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="cardNumber" placeholder="Card Number" required>
+            </div>
+            <div class="mb-3">
+              <input type="date" class="form-control" id="expiryDate" placeholder="Expiry Date (MM/YY)" required>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="cvv" placeholder="CVV" required>
+            </div>
+        
+            <div class="mb-3">
+              <input type="number" class="form-control" id="quantity" placeholder="Quantity" min="1" value="1" required>
+            </div>
+         
+            <button type="button" class="btn btn-primary" id="addToCartBtn">Add to Cart</button>
+          </form>
+          
+          <!-- End Credit Card Order Form -->
+        </div>
+      </div>
+      <div id="responseForm" class="response-form" style="display: none;">
+        <div class="response-content">
+          <span class="close-response">&times;</span>
+          <h2>Thank You!</h2>
+          <p>Your order has been submitted successfully.</p>
+      
+          <ul>
+            
+            <li>View other available products <a href="menu.html">here</a>.</li>
+          </ul>
+        </div>
+      </div>
      
  <!-- footer -->
  <footer id="footer" >
