@@ -62,6 +62,11 @@
                       <span>&#9660;</span> <!-- Unicode down arrow character -->
                     </button>
                 </div>
+                <div class="shopping">
+                  <img src="shopping.svg" alt="">
+                  <span class="quantity">0</span>
+                  </div>
+
             </div>
         </nav>
 
@@ -261,9 +266,6 @@
                 <input type="text" class="form-control" id="cvv" placeholder="CVV" required>
               </div>
           
-              <div class="mb-3">
-                <input type="number" class="form-control" id="quantity" placeholder="Quantity" min="1" value="1" required>
-              </div>
            
               <button type="button" class="btn btn-primary" id="addToCartBtn">Add to Cart</button>
             </form>
@@ -302,7 +304,7 @@
             <i class="fa-solid fa-star checked"></i>
           </div>
 
-          <p>$10 <i class="fa-solid fa-credit-card"id="showCreditCardForm3"></i></p>
+          <p>$10<i class="fa-solid fa-credit-card"id="showCreditCardForm3"></i></p>
         </div>
       </div>
     </div>
@@ -345,7 +347,22 @@
   </div>
 </section>
  <!-- menu section -->
-
+ <div class="list">
+         
+ </div>
+ <div class="card1">
+     <h1>shoppingCart</h1>
+     <ul class="listCard">
+     
+     </ul>
+     <p>Total:<span class="total"> $0.00</span></p>
+     <div class="checkOut">
+         
+         <button class="submitCartButton">Submit Cart</button>
+         <div class="closeShopping">Close </div>
+         
+     </div>
+ </div>
 <!-- gallery -->
 <div class="container" id="gallery">
   <h1 class="text-center">GALLERY</h1>

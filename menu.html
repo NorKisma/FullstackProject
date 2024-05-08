@@ -74,7 +74,6 @@
  <!-- menu section -->
 
  
-
     <!-- Menu Items -->
    
     <section class="Dishes" id="Dishes">
@@ -176,31 +175,7 @@
                 
                 </div>
           </div>
-            <!-- Credit Card Order Form-->
-    
-          <!--  <div id="creditCardPopup" class="popup-form1">
-              <div class="popup-content1">
-                <span class="close1">&times;</span>
-                <div class="heading">Order Your <span>Food | Coffee</span></div>
-              
-                <form id="creditCardOrderForm" action="#">
-                  <div class="mb-3">
-                    <input type="text" class="form-control" id="cardholderName" placeholder="Cardholder Name" required>
-                  </div>
-                  <div class="mb-3">
-                    <input type="text" class="form-control" id="cardNumber" placeholder="Card Number" required>
-                  </div>
-                  <div class="mb-3">
-                    <input type="date" class="form-control" id="expiryDate" placeholder="Expiry Date (MM/YY)" required>
-                  </div>
-                  <div class="mb-3">
-                    <input type="text" class="form-control" id="cvv" placeholder="CVV" required>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Order with Credit Card</button>
-                </form>
-          
-              </div>
-            </div>-->
+           
              
             
   
@@ -220,7 +195,7 @@
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
               </div>
-              <p value="5.5">$5.5 <i class="fa-solid fa-credit-card" onclick="addToCart()"></i></p>
+              <p value="5">$5<i class="fa-solid fa-credit-card" onclick="addToCart()"></i></p>
             </div>
           </div>
         </div>
@@ -238,7 +213,7 @@
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
               </div>
-              <p value="2.5">2.5<i class="fa-solid fa-credit-card" onclick="addToCart()"></i></p>
+              <p value="1">$1<i class="fa-solid fa-credit-card" onclick="addToCart()"></i> </p>
             </div>
           </div>
         </div>
@@ -255,7 +230,7 @@
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
               </div>
-              <p value="6.5">$6.5 <i class="fa-solid fa-credit-card" onclick="addToCart()"></i> </p>
+              <p value="6">$6<i class="fa-solid fa-credit-card" onclick="addToCart()"></i> </p>
             </div>
           </div>
         </div>
@@ -273,11 +248,12 @@
           <ul class="listCard">
           
           </ul>
+          <p id="val">Total:<span class="total"> $0.00</span></p>
           <div class="checkOut">
               
-              <p>Total:<span class="total"> $0.00</span></p>
-              <div class="closeShopping">Close </div>
               <button class="submitCartButton">Submit Cart</button>
+              <div class="closeShopping">Close </div>
+              
           </div>
       </div>
 
@@ -303,9 +279,7 @@
               <input type="text" class="form-control" id="cvv" placeholder="CVV" required>
             </div>
         
-            <div class="mb-3">
-              <input type="number" class="form-control" id="quantity" placeholder="Quantity" min="1" value="1" required>
-            </div>
+           
          
             <button type="button" class="btn btn-primary" id="addToCartBtn">Add to Cart</button>
           </form>
@@ -325,7 +299,7 @@
           </ul>
         </div>
       </div>
-     
+
  <!-- footer -->
  <footer id="footer" >
   <div class="footer-top">

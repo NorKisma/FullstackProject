@@ -286,16 +286,36 @@ $(document).ready(function() {
   updateTotal();
 });
 
-function submitCart() {
-  // Clear the cart
-  $('.listCard').empty();
-  
-  // Reset total and quantity
-  $('.total').text('$0.00');
-  $('.quantity').text('0');
+$(document).ready(function() {
+  $('.submitCartButton').on('click', function() {
+      $('#creditCardPopup').show(); 
+      
+      
+  });
 
-  // Display success message
-  alert('Cart submitted successfully!');
-}
+});
 
-$('.submitCartButton').on('click', submitCart);
+
+$(document).ready(function() {
+  $('#addToCartBtn').on('click', function() {
+    $('#creditCardPopup').hide();
+    $('#responseForm').show();
+    
+    
+    $('#cardholderName').val('');
+    $('#cardNumber').val('');
+    $('#expiryDate').val('');
+    $('#cvv').val('');
+    
+    
+    $('.listCard').empty();
+    
+   
+    $('.total').text('$0.00');
+    $('.quantity').text('0');
+  });
+});
+
+
+
+
