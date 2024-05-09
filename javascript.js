@@ -247,23 +247,19 @@ $(document).ready(function() {
         let $cartItem = $(this).closest('.cartItem');
         let itemPrice = parseFloat($cartItem.find('p').text().substring(1));
         let totalPrice = parseFloat($('.total').text().substring(1));
-        totalPrice -= itemPrice;
-        $('.total').text('$' + totalPrice.toFixed(0));
-        
-
+        // Decrease itemPrice by the quantity being removed
+        itemPrice /= currentQuantity; 
+        totalPrice = totalPrice - itemPrice;
+        $('.total').text('$' + totalPrice.toFixed(2));
     } else {
-        // If quantity is going to be 0, remove the entire cart item
         let $cartItem = $(this).closest('.cartItem');
         let itemPrice = parseFloat($cartItem.find('p').text().substring(1));
         let totalPrice = parseFloat($('.total').text().substring(1));
         totalPrice -= itemPrice;
-        $('.total').text('$' - totalPrice.toFixed(2));
+        $('.total').text('$' + totalPrice.toFixed(2));
         $cartItem.remove();  
-        
-        // Decrease cart count
         let currentQuantity = parseInt($('.quantity').text());
         $('.quantity').text(currentQuantity - 1);
-        
         updateTotal();
     }
 });
